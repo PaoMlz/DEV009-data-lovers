@@ -1,33 +1,47 @@
-
 .pagmovies {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 10px;
+}
+
+
+.Movies-item {
     display: flex;
-    gap:10px 20px;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
-
-}
-
-.Movies-item{
-    display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 300px;
-  background-color: #5b96e3;
-  border-radius: 8px;
-  padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  gap:10px 20px;
-}
-
-.Movies-item .texts{
-font-size:smaller;
-font-family: 'Times New Roman', Times, serif;
-align-items: center;
-}
-
-.Movies-item img {
-  width: 170px;
-  height: 190px;
-}
+    width: 200px;
+    height: 300px;
+    background-color: #5487c9;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+  }
+  
+  .Movies-item img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .texts {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .texts h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #ffffff;
+  }
+  
+  .texts h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  
 
