@@ -1,10 +1,12 @@
 .pagmovies {
-        display: grid;
+        display:grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(4, 1fr);
         gap: 10px;
         background-image:url(./imagenes/anime_Studio_Ghibli_Castle_in_the_Sky_floating_island-282993.jpg!d) ;
         background-repeat: repeat;
+        background-size: 100% auto;
+        display: none;
 }
 
 
@@ -47,10 +49,83 @@
   }
   
   .page-header {
-    height: 260px; 
+    height: 320px; 
     background-size: 100% auto;
     background-image: url("./imagenes/logostudioghibli.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    display: none;
     
   }
+
+  
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 767px) {
+  .pagmovies {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    background-size: cover;
+  }
+}
+
+/* Estilos para tabletas */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .pagmovies {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    background-size: cover;
+  }
+}
+
+/* Estilos para pantallas más grandes */
+@media screen and (min-width: 1024px) {
+  .pagmovies {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    background-size: 100% auto;
+  }
+}
+
+.home {
+    background-image: url(./imagenes/90ff6fe1fa93ee8abb993fbcdf80b7a8.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 767px) {
+  .home {
+    background-size: cover;
+  }
+}
+
+/* Estilos para tabletas */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .home {
+    background-size: cover;
+  }
+}
+
+/* Estilos para pantallas más grandes */
+@media screen and (min-width: 1024px) {
+  .home {
+    background-size: 100% auto;
+  }
+}
+
+.home p{
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 5vw;
+text-align: center;
+color: #ffffff;
+font-style: italic;
+font-weight: bold;
+}

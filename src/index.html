@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
     <div id="root"></div>
+
 
     <script src="main.js" type="module"></script>
 
@@ -14,8 +16,63 @@
 
 
     <main>
+
       <div class="pagmovies">
-    
+        
+        <form>
+        <select id="Sort" name="Sort A-Z">
+        <option selected>Sort by</option>
+        <option>A to Z</option>
+        <option> Z to A</option>
+        </select>
+        </form>
+
+        <form>
+        <select id="year" name="Byyear">
+        <option selected>By year</option>
+        <option>1986</option>
+        <option>1988</option>
+        <option>1989</option>
+        <option>1991</option>
+        <option>1992</option>
+        <option>1994</option>
+        <option>1995</option>
+        <option>1997</option>
+        <option>1999</option>
+        <option>2001</option>
+        <option>2002</option>
+        <option>2004</option>
+        <option>2006</option>
+        <option>2008</option>
+        <option>2010</option>
+        <option>2011</option>
+        <option>2013</option>
+        <option>2014</option>
+        </select>
+        </form>
+
+        <form>
+        <select id="direcandproduc" name="bydirecandproduc">
+        <option selected>By Director and Producer</option>
+        <option>Hayao Miyazaki</option>
+        <option>Isao Takahata</option>
+        <option>Toru Hara</option>
+        <option>Toshio Suzuki</option>
+        <option>Hiroyuki Morita</option>
+        <option>Gorō Miyazaki</option>
+        <option>Hiromasa Yonebayashi</option>
+        <option>Yoshiaki Nishimura </option>
+        </select> 
+        </form>
+        
+        <form>
+        <input type="text" placeholder="Search">
+        </form>
+       
+       <form >
+        <button id="home">Home</button>
+       </form>
+        
         <div class="Movies-item">
         <img src="https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/Castle_in_the_Sky.jpg" alt="A girl flying with a blue dress and a boy wearing a cap watching" >
         <div class="texts">
@@ -177,6 +234,13 @@
         </div>
 
       </div>
+
+       <div class="home">
+        <p>"Many of my movies have strong female leads– brave, self-sufficient girls that don't think twice about fighting for what they believe in with all their heart." Hayao Miyazaki</p>
+
+        
+       </div>
+
       
       </main>
   </body>
