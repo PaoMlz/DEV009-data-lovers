@@ -46,4 +46,11 @@
     color: #ffffff;
   }
   
-
+  .page-header {
+    height: 260px; 
+    background-size: 100% auto;
+    background-image: url("./imagenes/logostudioghibli.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+  }
