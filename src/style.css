@@ -111,6 +111,8 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .home {
     background-size: cover;
+    position: static;
+    text-align: center;
   }
 }
 
@@ -118,14 +120,42 @@
 @media screen and (min-width: 1024px) {
   .home {
     background-size: 100% auto;
+    position: static;
+    text-align: center;
   }
 }
 
 .home p{
 font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 font-size: 5vw;
-text-align: center;
+text-align:center;
 color: #ffffff;
 font-style: italic;
 font-weight: bold;
+}
+
+#movies{
+  border-radius: 20%;
+  height: 40px;
+  width: 150px;
+  color: black;
+  background-color: #F9E7DF;
+  position: fixed;
+  bottom: 40px;
+  left: 120px;
+  /* transform: translateX(-700%) translateY(600%);  */
+  
+}
+
+#character{
+  border-radius: 20%;
+  height: 40px;
+  width: 150px;
+  color: black;
+  background-color: #F9E7DF;
+  position: fixed;
+  bottom: 40px;
+  left: 400px;
+  /* transform: translateX(-500%) translateY(600%);  */
+  
 }
