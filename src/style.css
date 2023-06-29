@@ -97,6 +97,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    overflow: hidden;
   }
   
 
@@ -127,9 +128,10 @@
 
 .home p{
 font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-font-size: 5vw;
+font-size: 4vw;
 text-align:center;
 color: #ffffff;
+text-shadow: #3f7ed7;
 font-style: italic;
 font-weight: bold;
 }
@@ -158,4 +160,115 @@ font-weight: bold;
   left: 400px;
   /* transform: translateX(-500%) translateY(600%);  */
   
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.home {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./imagenes/90ff6fe1fa93ee8abb993fbcdf80b7a8.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.home p {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 4vw;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #3f7ed7;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#movies {
+  border-radius: 20%;
+  height: 40px;
+  width: 150px;
+  color: black;
+  background-color: #f9e7df;
+  margin-bottom: 20px;
+}
+
+#character {
+  border-radius: 20%;
+  height: 40px;
+  width: 150px;
+  color: black;
+  background-color: #f9e7df;
+  margin-bottom: 20px;
+}
+
+.redes {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #b6cfe4cf;
+  width: 330px;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 20px;
+}
+
+.redes h2 {
+  margin-top: 0;
+  color: #0c0202;
+  font-size: larger;
+  text-align: center;
+}
+
+.redes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.redes ul li {
+  margin: 5px;
+}
+
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 767px) {
+  .redes ul li img {
+    width: 30px;
+    height: 30px;
+  }
 }
