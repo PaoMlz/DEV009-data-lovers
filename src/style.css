@@ -1,129 +1,129 @@
-.pagmovies {
-        display:grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        gap: 10px;
-        background-image:url(./imagenes/anime_Studio_Ghibli_Castle_in_the_Sky_floating_island-282993.jpg!d) ;
-        background-repeat: repeat;
-        background-size: 100% auto;
-        display: none;
+.pagemovies {
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  background-image:url(./imagenes/anime_Studio_Ghibli_Castle_in_the_Sky_floating_island-282993.jpg!d) ;
+  background-repeat: repeat;
+  background-size: 100% auto;
+  display: none;
 }
 
 
-.Movies-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 200px;
-    height: 300px;
-    background-color: #3f7ed7;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin: 10px;
-  }
-  
-  .Movies-item img {
-    width: 150px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
-  }
-  
-  .texts {
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  .texts h2 {
-    margin: 0;
-    font-size: 18px;
-    color: #ffffff;
-  }
-  
-  .texts h3 {
-    margin: 0;
-    font-size: 16px;
-    color: #ffffff;
-  }
-  
-  .page-header {
-    height: 320px; 
-    background-size: 100% auto;
-    background-image: url("./imagenes/logostudioghibli.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    display: none;
-    
-  }
+.Movies-item{
+display: flex;
+flex-direction: column;
+align-items: center;
+flex-wrap: wrap;
+width: 200px;
+height: 300px;
+background-color: #3f7ed7;
+border-radius: 8px;
+padding: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+margin: 10px;
+}
 
-  
+.Movies-item img {
+width: 150px;
+height: 200px;
+object-fit: cover;
+border-radius: 4px;
+}
+
+.texts {
+text-align: center;
+margin-top: 10px;
+}
+
+.texts h2 {
+margin: 0;
+font-size: 18px;
+color: #ffffff;
+}
+
+.texts h3 {
+margin: 0;
+font-size: 16px;
+color: #ffffff;
+}
+
+.page-header {
+height: 320px; 
+background-size: 100% auto;
+background-image: url("./imagenes/logostudioghibli.jpg");
+background-repeat: no-repeat;
+background-position: center;
+display: none;
+
+}
+
+
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 767px) {
-  .pagmovies {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    background-size: cover;
-  }
+.pagemovies {
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: auto;
+background-size: cover;
+}
 }
 
 /* Estilos para tabletas */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .pagmovies {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    background-size: cover;
-  }
+.pagemovies {
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: auto;
+background-size: cover;
+}
 }
 
 /* Estilos para pantallas más grandes */
 @media screen and (min-width: 1024px) {
-  .pagmovies {
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    background-size: 100% auto;
-  }
+.pagemovies {
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(4, 1fr);
+background-size: 100% auto;
+}
 }
 
 .home {
-    background-image: url(./imagenes/90ff6fe1fa93ee8abb993fbcdf80b7a8.gif);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-  }
-  
+background-image: url(./imagenes/90ff6fe1fa93ee8abb993fbcdf80b7a8.gif);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+overflow: hidden;
+}
+
 
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 767px) {
-  .home {
-    background-size: cover;
-  }
+.home {
+background-size: cover;
+}
 }
 
 /* Estilos para tabletas */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .home {
-    background-size: cover;
-    position: static;
-    text-align: center;
-  }
+.home {
+background-size: cover;
+position: static;
+text-align: center;
+}
 }
 
 /* Estilos para pantallas más grandes */
 @media screen and (min-width: 1024px) {
-  .home {
-    background-size: 100% auto;
-    position: static;
-    text-align: center;
-  }
+.home {
+background-size: 100% auto;
+position: static;
+text-align: center;
+}
 }
 
 .home p{
@@ -136,172 +136,172 @@ font-style: italic;
 font-weight: bold;
 }
 
-#movies{
-  border-radius: 20%;
-  height: 40px;
-  width: 150px;
-  color: black;
-  background-color: #F9E7DF;
-  position: fixed;
-  bottom: 40px;
-  left: 120px;
-  /* transform: translateX(-700%) translateY(600%);  */
-  
+#moviesbutton{
+border-radius: 20%;
+height: 40px;
+width: 150px;
+color: black;
+background-color: #F9E7DF;
+position: fixed;
+bottom: 40px;
+left: 120px;
+/* transform: translateX(-700%) translateY(600%);  */
+
 }
 
 #character{
-  border-radius: 20%;
-  height: 40px;
-  width: 150px;
-  color: black;
-  background-color: #F9E7DF;
-  position: fixed;
-  bottom: 40px;
-  left: 400px;
-  /* transform: translateX(-500%) translateY(600%);  */
-  
+border-radius: 20%;
+height: 40px;
+width: 150px;
+color: black;
+background-color: #F9E7DF;
+position: fixed;
+bottom: 40px;
+left: 400px;
+/* transform: translateX(-500%) translateY(600%);  */
+
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+margin: 0;
+padding: 0;
+overflow-x: hidden;
 }
 
 .home {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
+position: relative;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+overflow: hidden;
 }
 
 .home::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(./imagenes/90ff6fe1fa93ee8abb993fbcdf80b7a8.gif);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.5;
-  z-index: -1;
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: url(./imagenes/90ff6fe1fa93ee8abb993fbcdf80b7a8.gif);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+opacity: 0.5;
+z-index: -1;
 }
 
 .home p {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 4vw;
-  text-align: center;
-  color: #ffffff;
-  text-shadow: 1px 1px 2px #3f7ed7;
-  font-style: italic;
-  font-weight: bold;
-  margin-bottom: 20px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 4vw;
+text-align: center;
+color: #ffffff;
+text-shadow: 1px 1px 2px #3f7ed7;
+font-style: italic;
+font-weight: bold;
+margin-bottom: 20px;
 }
 
-#movies {
-  border-radius: 20%;
-  height: 40px;
-  width: 150px;
-  color: black;
-  background-color: #f9e7df;
-  margin-bottom: 20px;
+#moviesbutton {
+border-radius: 20%;
+height: 40px;
+width: 150px;
+color: black;
+background-color: #f9e7df;
+margin-bottom: 20px;
 }
 
 #character {
-  border-radius: 20%;
-  height: 40px;
-  width: 150px;
-  color: black;
-  background-color: #f9e7df;
-  margin-bottom: 20px;
-  
+border-radius: 20%;
+height: 40px;
+width: 150px;
+color: black;
+background-color: #f9e7df;
+margin-bottom: 20px;
+
 }
 
 .redes {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px;
-  background-color: #b6cfe4cf;
-  width: 330px;
-  max-height: 200px;
-  overflow-y: auto;
-  border-radius: 20px;
+position: absolute;
+bottom: 20px;
+right: 20px;
+padding: 10px;
+background-color: #b6cfe4cf;
+width: 330px;
+max-height: 200px;
+overflow-y: auto;
+border-radius: 20px;
 }
 
 .redes h2 {
-  margin-top: 0;
-  color: #0c0202;
-  font-size: larger;
-  text-align: center;
+margin-top: 0;
+color: #0c0202;
+font-size: larger;
+text-align: center;
 }
 
 .redes ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
 }
 
 .redes ul li {
-  margin: 5px;
+margin: 5px;
 }
 
 
 .logo {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+position: absolute;
+top: 20px;
+left: 50%;
+transform: translateX(-50%);
+z-index: 1;
 }
 
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 767px) {
-  .redes ul li img {
-    width: 30px;
-    height: 30px;
-  }
+.redes ul li img {
+width: 30px;
+height: 30px;
+}
 }
 
 /* button#movies {
-  display: flex;
-  align-items: center;
-  justify-content: center;
- 
+display: flex;
+align-items: center;
+justify-content: center;
+
 }
 
 button#character {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+display: flex;
+align-items: center;
+justify-content: center;
 } */
 
 .characterbutton {
-  width: 40px;
-  height: 80px;
-  margin-right: 10px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  align-items:center;
-  justify-content:center;
+width: 40px;
+height: 80px;
+margin-right: 10px;
+border-radius: 50%;
+overflow: hidden;
+display: flex;
+align-items:center;
+justify-content:center;
 }
 
 .moviesbutton {
-  width: 80px;
-  height: 40px;
-  margin-bottom: 10px;
-  border-radius: 50%;
-  overflow: hidden;
+width: 80px;
+height: 40px;
+margin-bottom: 10px;
+border-radius: 50%;
+overflow: hidden;
 }

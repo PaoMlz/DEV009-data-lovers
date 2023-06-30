@@ -1,4 +1,4 @@
-// estas funciones son de ejemplo
+//funcion ordenar filtrar buscar y comparar
 
 export const example = () => {
   return 'example';
