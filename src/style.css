@@ -1,63 +1,47 @@
-.pagemovies {
-  display:grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+#pagemovies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   gap: 10px;
-  background-image:url(./imagenes/anime_Studio_Ghibli_Castle_in_the_Sky_floating_island-282993.jpg!d) ;
+  background-image: url(./imagenes/anime_Studio_Ghibli_Castle_in_the_Sky_floating_island-282993.jpg!d);
   background-repeat: repeat;
   background-size: 100% auto;
-  /* display: none; */
+  overflow: hidden;
 }
 
-
-.Movies-item{
-display: flex;
-flex-direction: column;
-align-items: center;
-flex-wrap: wrap;
-width: 200px;
-height: 300px;
-background-color: #3f7ed7;
-border-radius: 8px;
-padding: 10px;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-margin: 10px;
+.card {
+  display: flex;
+  flex-direction: column; /* Añadido para que la imagen y el texto estén en columnas */
+  justify-content: center; /* Añadido para centrar verticalmente el contenido */
+  align-items: center; /* Añadido para centrar horizontalmente el contenido */
+  width: 100%;
+  height: 100%;
+  background-color: #3f7ed7;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  box-sizing: border-box; /* Añadido para asegurar que el padding no afecte el tamaño total de las tarjetas */
 }
 
-.Movies-item img {
-width: 150px;
-height: 200px;
-object-fit: cover;
-border-radius: 4px;
+.card img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
-.texts {
-text-align: center;
-margin-top: 10px;
+p {
+  text-align: center; /* Añadido para centrar el texto */
+  margin-top: 10px;
 }
 
-.texts h2 {
-margin: 0;
-font-size: 18px;
-color: #ffffff;
+.card h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
 }
-
-.texts h3 {
-margin: 0;
-font-size: 16px;
-color: #ffffff;
-}
-
-.page-header {
-height: 320px; 
-background-size: 100% auto;
-background-image: url("./imagenes/logostudioghibli.jpg");
-background-repeat: no-repeat;
-background-position: center;
-display: none;
-
-}
-
 
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 767px) {
@@ -98,6 +82,7 @@ justify-content: center;
 align-items: center;
 text-align: center;
 overflow: hidden;
+display: none;
 }
 
 
@@ -134,33 +119,9 @@ color: #ffffff;
 text-shadow: #3f7ed7;
 font-style: italic;
 font-weight: bold;
+display: none;
 }
 
-#moviesbutton{
-border-radius: 20%;
-height: 40px;
-width: 150px;
-color: black;
-background-color: #F9E7DF;
-position: fixed;
-bottom: 40px;
-left: 120px;
-/* transform: translateX(-700%) translateY(600%);  */
-
-}
-
-#character{
-border-radius: 20%;
-height: 40px;
-width: 150px;
-color: black;
-background-color: #F9E7DF;
-position: fixed;
-bottom: 40px;
-left: 400px;
-/* transform: translateX(-500%) translateY(600%);  */
-
-}
 
 body {
 margin: 0;
@@ -177,6 +138,7 @@ justify-content: center;
 align-items: center;
 text-align: center;
 overflow: hidden;
+display: none;
 }
 
 .home::before {
@@ -205,24 +167,6 @@ font-weight: bold;
 margin-bottom: 20px;
 }
 
-#moviesbutton {
-border-radius: 20%;
-height: 40px;
-width: 150px;
-color: black;
-background-color: #f9e7df;
-margin-bottom: 20px;
-}
-
-#character {
-border-radius: 20%;
-height: 40px;
-width: 150px;
-color: black;
-background-color: #f9e7df;
-margin-bottom: 20px;
-
-}
 
 .redes {
 position: absolute;
@@ -257,7 +201,6 @@ align-items: center;
 margin: 5px;
 }
 
-
 .logo {
 position: absolute;
 top: 20px;
@@ -274,34 +217,3 @@ height: 30px;
 }
 }
 
-/* button#movies {
-display: flex;
-align-items: center;
-justify-content: center;
-
-}
-
-button#character {
-display: flex;
-align-items: center;
-justify-content: center;
-} */
-
-.characterbutton {
-width: 40px;
-height: 80px;
-margin-right: 10px;
-border-radius: 50%;
-overflow: hidden;
-display: flex;
-align-items:center;
-justify-content:center;
-}
-
-.moviesbutton {
-width: 80px;
-height: 40px;
-margin-bottom: 10px;
-border-radius: 50%;
-overflow: hidden;
-}
