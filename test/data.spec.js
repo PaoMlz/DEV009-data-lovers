@@ -1,13 +1,14 @@
-import { example, anotherExample } from '../src/data.js';
+import { sorted, anotherExample } from '../src/data.js';
 
 
-describe('example', () => {
+describe('sorted', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof sorted).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returns an array', () => {
+    const result = sorted()
+    expect(Array.isArray(result)).toBe(true);
   });
 });
 
