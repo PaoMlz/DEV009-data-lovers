@@ -57,7 +57,7 @@ sortTitle.addEventListener("change",()=>{
   const sortedDataAsc = sorted(films, userOption);
   pagemovies.innerHTML = "";
   showAllCards(sortedDataAsc);
-  console.log(sortedDataAsc);
+  // console.log(sortedDataAsc);
 
 
 });
@@ -71,7 +71,7 @@ selectYearElement.addEventListener("change", () => {
   const byYear = films.filter((film) => film.release_date === userSelect);
   pagemovies.innerHTML = "";
   showAllCards(byYear);
-  console.log(byYear);
+  // console.log(byYear);
 });
 
 
@@ -81,7 +81,7 @@ selectproductElement.addEventListener("change", () => {
   const bydireprodu = films.filter((film) => film.director === userSelect2 || film.producer === userSelect2);
   pagemovies.innerHTML = "";
   showAllCards(bydireprodu);
-  console.log(bydireprodu);
+  // console.log(bydireprodu);
 });
 
 
