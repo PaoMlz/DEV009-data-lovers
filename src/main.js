@@ -38,18 +38,6 @@ const showAllCards= (films) => {
 };
 
 
-//  console.log(sorted(films,"asc"));
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   let moviesbutton = document.getElementById("moviesbutton");
-//   let home = document.querySelector(".home");
-//   let pagemovies = document.querySelector(".pagemovies");
-
-//   moviesbutton.addEventListener("click", function() {
-//     home.style.display = "none"; // Oculta el div "home"
-//     pagemovies.style.display = "grid"; // Muestra el div "pagemovies"
-//  });
-
   
 const sortTitle = document.getElementById("sort");
 sortTitle.addEventListener("change",()=>{
@@ -92,6 +80,33 @@ searchmovie.addEventListener("keydown", (event) => { //keydown se usa cuando uno
     showAllCards(searchresult);
   }
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  let moviesbutton = document.getElementById("moviesbutton");
+  let home = document.querySelector(".home");
+  let pagemoviesbig = document.getElementById("pagemoviebig"); // Corregido el ID del elemento
+
+  moviesbutton.addEventListener("click", function() {
+    home.style.display = "none";//que no se vea la pagina inicial
+    pagemoviesbig.style.display = "grid";//que se vea pagemoviebig
+    pagemovies.style.display= "grid"; // que se vea pagemovies
+  });
+
+  btnhome.addEventListener("click", function() {
+    home.style.display = "block";//que se vea
+    pagemoviesbig.style.display = "none";
+  });
+});
+
+
+
+
+
+
+
+
 
 
 

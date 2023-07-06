@@ -1,5 +1,5 @@
 #pagemovies {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
   gap: 30px;
@@ -24,6 +24,13 @@
   box-sizing: border-box; /* Añadido para asegurar que el padding no afecte el tamaño total de las tarjetas */
 }
 
+select {
+font-size: medium; /* Ajusta el tamaño de la letra según tus necesidades */
+border-radius: 20px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
 .card img {
   width: 150px;
   height: 200px;
@@ -44,7 +51,7 @@ p {
 }
 
 #pagemoviebig{
-  display: grid;
+  display: none;
   justify-content: center; /* Añadido para centrar verticalmente el contenido */
   align-items: center;
   background-image: url(./imagenes/anime_Studio_Ghibli_Castle_in_the_Sky_floating_island-282993.jpg!d);
@@ -111,6 +118,7 @@ display: none;
 @media screen and (max-width: 767px) {
 .home {
 background-size: cover;
+flex-wrap: wrap;
 }
 }
 
@@ -118,8 +126,9 @@ background-size: cover;
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 .home {
 background-size: cover;
-position: static;
+position:fixed;
 text-align: center;
+flex-wrap: wrap;
 }
 }
 
@@ -127,7 +136,7 @@ text-align: center;
 @media screen and (min-width: 1024px) {
 .home {
 background-size: 100% auto;
-position: static;
+position:fixed;
 text-align: center;
 }
 }
@@ -140,7 +149,6 @@ color: #ffffff;
 text-shadow: #3f7ed7;
 font-style: italic;
 font-weight: bold;
-display: none;
 }
 
 
@@ -158,8 +166,8 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align: center;
+flex-wrap: wrap;
 overflow: hidden;
-display: none;
 }
 
 .home::before {
@@ -191,7 +199,7 @@ margin-bottom: 20px;
 
 .redes {
 position: absolute;
-bottom: 20px;
+bottom: 40px;
 right: 20px;
 padding: 10px;
 background-color: #b6cfe4cf;
@@ -238,3 +246,61 @@ height: 30px;
 }
 }
 
+#btnhome{
+  font-size:15px;
+  font-family:Verdana,Helvetica;
+  font-weight:bold;
+  color:white;
+  background:#6689ac;
+  border:0px;
+  width:90px;
+  height:20px;
+  border-radius: 20px;
+}
+
+#moviesbutton{
+background-image:url(./imagenes/WhatsApp-Video-2023-07-05-at-7.46.40-PM.gif);
+width: 250px;
+height:140px;
+background-size: 100% auto;
+background-repeat:no-repeat ;
+color:rgb(255, 245, 245);
+font-size: 60px;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+align-content: center;
+position: absolute;
+bottom: 50px;
+left: 80px;
+padding: 10px;
+border-radius: 20px;
+}
+
+#character{
+  background-image:url(./imagenes/totorm.gif);
+  width: 260px;
+  height:140px;
+  background-size: 100% auto;
+  background-repeat:no-repeat ;
+  color:rgb(255, 245, 245);
+  font-size:50px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+  position: absolute;
+  bottom: 50px;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  #moviesbutton {
+    width: 150px;
+    height: 80px;
+    font-size: 24px;
+    padding: 8px;
+  }
+  
+  #character {
+    width: 150px;
+    height: 80px;
+    font-size: 18px;
+    padding: 6px;
+  }
+}
