@@ -65,10 +65,10 @@ showAllCards(films);
   
 const selectYearElement = document.getElementById("year");
 selectYearElement.addEventListener("change", () => {
-const userSelect = selectYearElement.value;
-const byYear = selectYear(films, userSelect); 
-pagemovies.innerHTML = "";
-showAllCards(byYear);
+  const userSelect = selectYearElement.value;
+  const byYear = selectYear(films, userSelect); 
+  pagemovies.innerHTML = "";
+  showAllCards(byYear);
 });
 
 
@@ -86,10 +86,10 @@ const searchmovie = document.getElementById("moviesearch2");
 searchmovie.addEventListener("keydown", (event) => { //keydown se usa cuando uno quiere que una tecla especifica empiece el evento.
   if (event.key === "Enter") { /// la condicion para decir con que tecla sucede
     event.preventDefault();
-const usersearch = searchmovie.value;
-const searchresult = searchmovies(films, usersearch);
-pagemovies.innerHTML = "";
-showAllCards(searchresult);
+    const usersearch = searchmovie.value;
+    const searchresult = searchmovies(films, usersearch);
+    pagemovies.innerHTML = "";
+    showAllCards(searchresult);
   }
 });
 
