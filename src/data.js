@@ -13,13 +13,18 @@ export const sorted = (data, sortOrder) => {
   });
 };
 
-export const selectYear = ( data, ) => {
-  return data. filter (films => films.release_date === release_date);
+export const selectYear = (data, release_date) => {
+  return data.filter(film => film.release_date === release_date);
 };
 
 export const selectDirPro = (data, directorOrProducer) => {
-  return data.filter((films) => films.director === directorOrProducer || films.producer === directorOrProducer);
+  return data.filter((film) => film.director === directorOrProducer || film.producer === directorOrProducer);
 };
+
+export const searchmovies = (data, input) => {
+  return data.filter(film => film.title.toLowerCase().includes(input.toLowerCase()));
+};
+
 
 
  

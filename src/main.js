@@ -1,5 +1,5 @@
 import data from './data/ghibli/ghibli.js';
-import { sorted, selectYear, selectDirPro } from './data.js';
+import { sorted, selectYear, selectDirPro,searchmovies } from './data.js';
 
 const films=data.films;
 const pagemoviebig= document.getElementById("pagemoviebig");
@@ -58,8 +58,6 @@ sortTitle.addEventListener("change",()=>{
   pagemovies.innerHTML = "";
   showAllCards(sortedDataAsc);
   // console.log(sortedDataAsc);
-
-
 });
 
 showAllCards(films);
@@ -67,23 +65,33 @@ showAllCards(films);
   
 const selectYearElement = document.getElementById("year");
 selectYearElement.addEventListener("change", () => {
-  const userSelect = selectYearElement.value;
-  const byYear = films.filter((film) => film.release_date === userSelect);
-  pagemovies.innerHTML = "";
-  showAllCards(byYear);
-  // console.log(byYear);
+const userSelect = selectYearElement.value;
+const byYear = selectYear(films, userSelect); 
+pagemovies.innerHTML = "";
+showAllCards(byYear);
 });
 
 
 const selectproductElement = document.getElementById("direcandproduc");
 selectproductElement.addEventListener("change", () => {
   const userSelect2 = selectproductElement.value;
-  const bydireprodu = films.filter((film) => film.director === userSelect2 || film.producer === userSelect2);
+  const bydireprodu = selectDirPro(films, userSelect2);
   pagemovies.innerHTML = "";
   showAllCards(bydireprodu);
   // console.log(bydireprodu);
 });
 
+
+const searchmovie = document.getElementById("moviesearch2");
+searchmovie.addEventListener("keydown", (event) => { //keydown se usa cuando uno quiere que una tecla especifica empiece el evento.
+  if (event.key === "Enter") { /// la condicion para decir con que tecla sucede
+    event.preventDefault();
+const usersearch = searchmovie.value;
+const searchresult = searchmovies(films, usersearch);
+pagemovies.innerHTML = "";
+showAllCards(searchresult);
+  }
+});
 
 
 
