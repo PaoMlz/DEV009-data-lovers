@@ -16,10 +16,9 @@
 
 
     <main>
-
-      <div id="pagemovies" >
- 
-        <form>
+    <div id="pagemoviebig">
+      <div id ="cabeza">
+      <form>
         <select id="sort" name="sort A-Z">
         <option selected value="all">Sort by</option>
         <option value="asc">A to Z</option>
@@ -29,7 +28,7 @@
 
         <form>
         <select id="year" name="Byyear">
-        <option selected>By year</option>
+        <option selected value="all">By year</option>
         <option>1986</option>
         <option>1988</option>
         <option>1989</option>
@@ -66,16 +65,21 @@
         </form>
         
         <form>
-        <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search" id="moviesearch">
         </form>
        
        <form >
         <button id="home">Home</button>
        </form>
+      </div>
+      <div id="pagemovies" >
+  
+       
       
-        
+      </div>
         
       </div>
+    </div>
 
        <div class="home">
         <img src="./imagenes/Studio_Ghibli_portal_logo.png" alt="logo Studio Ghibli" class="logo" width="200" height="100" >

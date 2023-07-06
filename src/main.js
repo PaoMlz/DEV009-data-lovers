@@ -1,8 +1,8 @@
 import data from './data/ghibli/ghibli.js';
-import { sorted } from './data.js';
+import { sorted, selectYear, selectDirPro } from './data.js';
 
 const films=data.films;
-
+const pagemoviebig= document.getElementById("pagemoviebig");
 const pagemovies =document.getElementById("pagemovies");
 
 const showAllCards= (films) => {
@@ -33,8 +33,9 @@ const showAllCards= (films) => {
     card.appendChild(poster);
 
     pagemovies.appendChild(card);
+    pagemoviebig.appendChild(pagemovies);
   }
-}
+};
 
 
 //  console.log(sorted(films,"asc"));
@@ -54,15 +55,42 @@ const sortTitle = document.getElementById("sort");
 sortTitle.addEventListener("change",()=>{
   const userOption = sortTitle.value;
   const sortedDataAsc = sorted(films, userOption);
-  pagemovies.innerHTML =  "";
+  pagemovies.innerHTML = "";
   showAllCards(sortedDataAsc);
-  //  console.log(sortedDataAsc);
+  console.log(sortedDataAsc);
 
 
-})
+});
 
 showAllCards(films);
 
   
+const selectYearElement = document.getElementById("year");
+selectYearElement.addEventListener("change", () => {
+  const userSelect = selectYearElement.value;
+  const byYear = films.filter((film) => film.release_date === userSelect);
+  pagemovies.innerHTML = "";
+  showAllCards(byYear);
+  console.log(byYear);
+});
+
+
+const selectproductElement = document.getElementById("direcandproduc");
+selectproductElement.addEventListener("change", () => {
+  const userSelect2 = selectproductElement.value;
+  const bydireprodu = films.filter((film) => film.director === userSelect2 || film.producer === userSelect2);
+  pagemovies.innerHTML = "";
+  showAllCards(bydireprodu);
+  console.log(bydireprodu);
+});
+
+
+
+
+
+
+
+
+
 
  

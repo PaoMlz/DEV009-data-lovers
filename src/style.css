@@ -43,6 +43,27 @@ p {
   text-align: center;
 }
 
+#pagemoviebig{
+  display: grid;
+  justify-content: center; /* Añadido para centrar verticalmente el contenido */
+  align-items: center;
+  background-image: url(./imagenes/anime_Studio_Ghibli_Castle_in_the_Sky_floating_island-282993.jpg!d);
+  background-repeat:repeat;
+  background-size: 100;
+}
+
+#cabeza {
+  display: flex;
+  gap: 40px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./imagenes/tumblr_m8rwabWSdB1r621gdo1_r1_500.gif);
+  background-repeat:repeat;
+  background-size: 35% auto;
+}
+
+
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 767px) {
 .pagemovies {

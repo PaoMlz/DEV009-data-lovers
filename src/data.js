@@ -13,6 +13,22 @@ export const sorted = (data, sortOrder) => {
   });
 };
 
+export const selectYear = ( data, ) => {
+  return data. filter (films => films.release_date === release_date);
+};
+
+export const selectDirPro = (data, directorOrProducer) => {
+  return data.filter((films) => films.director === directorOrProducer || films.producer === directorOrProducer);
+};
+
+
+ 
+  
+
+
+
+
+
 
 
 
