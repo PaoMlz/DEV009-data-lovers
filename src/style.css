@@ -43,13 +43,21 @@ p {
   margin-top: 10px;
 }
 
+.card h1 {
+  margin: 0;
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+  font-size: smaller;
+}
+
 .card h2 {
   margin: 0;
   font-size: 18px;
   color: #ffffff;
   text-align: center;
+  font-size: large;
 }
-
 #pagemoviebig{
   display: none;
   justify-content: center; /* Añadido para centrar verticalmente el contenido */
@@ -303,4 +311,50 @@ border-radius: 20px;
     font-size: 18px;
     padding: 6px;
   }
+}
+
+.card-content {
+  display:none;
+  overflow: hidden;
+  background-image:url(./imagenes/wallpaper\ totoro.png);
+  background-size: 100% auto;
+  background-repeat:no-repeat;
+  margin: 20px;
+  border-radius: 20px;
+}
+.card-content h1{
+  color: #ffffff;
+  text-align: center;
+  font-size: medium;
+}
+.card-content h2{
+  color: #7ef0f1;
+  text-align: center;
+  font-size:xx-large;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
+.card-content h3{
+  color: #ffffff;
+  text-align:center;
+  margin: 10px;
+}
+.card-content img {
+  position: relative;
+  align-items: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.card-content p{
+  color: #000000;
+  /* text-align:center; */
+  position: relative;
+  margin: 40px;
+  letter-spacing: 2px;
+  text-align: justify;
 }
