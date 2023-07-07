@@ -84,9 +84,10 @@ searchmovie.addEventListener("keydown", (event) => { //keydown se usa cuando uno
 
 
 document.addEventListener("DOMContentLoaded", function() {
-  let moviesbutton = document.getElementById("moviesbutton");
-  let home = document.querySelector(".home");
-  let pagemoviesbig = document.getElementById("pagemoviebig"); // Corregido el ID del elemento
+  const moviesbutton = document.getElementById("moviesbutton");
+  const home = document.querySelector(".home");
+  const pagemoviesbig = document.getElementById("pagemoviebig"); // Corregido el ID del elemento
+  const btnhome = document.getElementById("btnhome");
 
   moviesbutton.addEventListener("click", function() {
     home.style.display = "none";//que no se vea la pagina inicial
