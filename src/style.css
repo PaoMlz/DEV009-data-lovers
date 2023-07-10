@@ -364,16 +364,31 @@ border-radius: 20px;
 }
 
 #characterList { /*nuevo */
-  display: block;
-  visibility: hidden;
+  background-color: #6689ac;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 30px;
+  background-repeat: repeat;
+  background-size: 100% auto;
+  overflow: hidden;
+  height: 800px;
+  
 
 
 }
 
 .character-card {
   background-color: #3f7ed7;
-  display:none;
- 
+  display: flex;
+  flex-direction: column; /* Añadido para que la imagen y el texto estén en columnas */
+  justify-content: center; /* Añadido para centrar verticalmente el contenido */
+  align-items: center; /* Añadido para centrar horizontalmente el contenido */
+  flex-wrap: wrap;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  box-sizing: border-box; /* Añadido para asegurar que el padding no afecte el tamaño total de las tarjetas */
 }
 
 

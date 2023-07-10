@@ -71,54 +71,38 @@ const showAllCards = (films) => {
 };
 
 const showAllCharacters = () => {
-  for (let i = 0; i < films.length; i++) {
-    // console.log(films[i].people);
-    for (let j = 0; j < films[i].people.length; j++) {
-      const characterId = films[i].people[j];
-
-      if (Array.isArray(characterId)) {
-        for (let k = 0; k < characterId.length; k++) {
-          const character = characterId[k]; // Utilizar characterId[k] directamente
-
-          if (character) {
-            const characterCard = document.createElement("div");
-            characterCard.className = "character-card";
-
-            const img = document.createElement("img");
-            img.src = character.img;
-            img.alt = character.name;
-
-            const name = document.createElement("h2");
-            name.innerText = character.name;
-
-            characterCard.appendChild(img);
-            characterCard.appendChild(name);
-
-            characterList.appendChild(characterCard);
-          }
-        }
-      } else {
-        const character = characterId; // Utilizar characterId directamente
-
-        if (character) {
-          const characterCard = document.createElement("div");
-          characterCard.className = "character-card";
-
-          const img = document.createElement("img");
-          img.src = character.img;
-          img.alt = character.name;
-
-          const name = document.createElement("h2");
-          name.innerText = character.name;
-
-          characterCard.appendChild(img);
-          characterCard.appendChild(name);
-
-          characterList.appendChild(characterCard);
-        }
-      }
+  const allCharacters = films.reduce((characters, film) => {
+    const people = film.people;
+  
+    if (people) {
+      characters.push(...people);
     }
+    return characters;
+  },[]);
+console.log (allCharacters);
+  if (allCharacters.length === 0) {
+    console.log("No hay personajes para mostrar.");
   }
+  else{ 
+
+  for (let i = 0; i < allCharacters.length; i++) {
+    const character = allCharacters[i];
+      const characterCard = document.createElement("div");
+      characterCard.className = "character-card";
+
+      const img = document.createElement("img");
+      img.src = character.img;
+      img.alt = character.name;
+
+      const name = document.createElement("h2");
+      name.innerText = character.name;
+
+      characterCard.appendChild(img);
+      characterCard.appendChild(name);
+
+      characterList.appendChild(characterCard);
+    } 
+  };
 };
 
   
@@ -131,8 +115,7 @@ sortTitle.addEventListener("change",()=>{
   // console.log(sortedDataAsc);
 });
 
-showAllCards(films);
-showAllCharacters(films.people);  
+showAllCards(films);  
 
   
 const selectYearElement = document.getElementById("year");
@@ -185,9 +168,9 @@ document.addEventListener("DOMContentLoaded", function() {
     home.style.display = "none";
     pagemoviesbig.style.display = "none";
     pagemovies.style.display = "none";
-    characterList.style.display = "grid";
-    showAllCharacters()
-    
+    showAllCharacters();
+    characterList.style.display = "flex";
+    console.log("clicpersonaje");
   });
 
   btnhome.addEventListener("click", function() {
@@ -197,8 +180,3 @@ document.addEventListener("DOMContentLoaded", function() {
   
 
 });
-
-
- 
-
-
