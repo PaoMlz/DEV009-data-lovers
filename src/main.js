@@ -4,6 +4,7 @@ import { sorted, selectYear, selectDirPro,searchmovies } from './data.js';
 const films=data.films;
 const pagemoviebig= document.getElementById("pagemoviebig");
 const pagemovies =document.getElementById("pagemovies");
+const characterList = document.getElementById("characterList");//Nuevo
 
 const showAllCards = (films) => {
   for (let i = 0; i < films.length; i++) {
@@ -69,6 +70,57 @@ const showAllCards = (films) => {
   }
 };
 
+const showAllCharacters = () => {
+  for (let i = 0; i < films.length; i++) {
+    // console.log(films[i].people);
+    for (let j = 0; j < films[i].people.length; j++) {
+      const characterId = films[i].people[j];
+
+      if (Array.isArray(characterId)) {
+        for (let k = 0; k < characterId.length; k++) {
+          const character = characterId[k]; // Utilizar characterId[k] directamente
+
+          if (character) {
+            const characterCard = document.createElement("div");
+            characterCard.className = "character-card";
+
+            const img = document.createElement("img");
+            img.src = character.img;
+            img.alt = character.name;
+
+            const name = document.createElement("h2");
+            name.innerText = character.name;
+
+            characterCard.appendChild(img);
+            characterCard.appendChild(name);
+
+            characterList.appendChild(characterCard);
+          }
+        }
+      } else {
+        const character = characterId; // Utilizar characterId directamente
+
+        if (character) {
+          const characterCard = document.createElement("div");
+          characterCard.className = "character-card";
+
+          const img = document.createElement("img");
+          img.src = character.img;
+          img.alt = character.name;
+
+          const name = document.createElement("h2");
+          name.innerText = character.name;
+
+          characterCard.appendChild(img);
+          characterCard.appendChild(name);
+
+          characterList.appendChild(characterCard);
+        }
+      }
+    }
+  }
+};
+
   
 const sortTitle = document.getElementById("sort");
 sortTitle.addEventListener("change",()=>{
@@ -80,6 +132,7 @@ sortTitle.addEventListener("change",()=>{
 });
 
 showAllCards(films);
+showAllCharacters(films.people);  
 
   
 const selectYearElement = document.getElementById("year");
@@ -116,6 +169,7 @@ searchmovie.addEventListener("keydown", (event) => { //keydown se usa cuando uno
 
 document.addEventListener("DOMContentLoaded", function() {
   const moviesbutton = document.getElementById("moviesbutton");
+  const characterButton = document.getElementById("characterButton");//nueeeeeeeeeeevo
   const home = document.querySelector(".home");
   const pagemoviesbig = document.getElementById("pagemoviebig"); // Corregido el ID del elemento
   const btnhome = document.getElementById("btnhome");
@@ -127,13 +181,24 @@ document.addEventListener("DOMContentLoaded", function() {
     pagemovies.style.display= "grid"; // que se vea pagemovies
   });
 
+  characterButton.addEventListener("click", function() {
+    home.style.display = "none";
+    pagemoviesbig.style.display = "none";
+    pagemovies.style.display = "none";
+    characterList.style.display = "grid";
+    showAllCharacters()
+    
+  });
+
   btnhome.addEventListener("click", function() {
     home.style.display = "block";//que se vea
     pagemoviesbig.style.display = "none";
   });
- 
+  
 
 });
+
+
  
 
 

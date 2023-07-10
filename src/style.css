@@ -283,7 +283,7 @@ padding: 10px;
 border-radius: 20px;
 }
 
-#character{
+#characterButton{
   background-image:url(./imagenes/totorm.gif);
   width: 260px;
   height:140px;
@@ -348,6 +348,10 @@ border-radius: 20px;
   align-items: center;
   display: block;
   margin: 0 auto;
+  width: 170px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .card-content p{
@@ -358,3 +362,18 @@ border-radius: 20px;
   letter-spacing: 2px;
   text-align: justify;
 }
+
+#characterList { /*nuevo */
+  display: block;
+  visibility: hidden;
+
+
+}
+
+.character-card {
+  background-color: #3f7ed7;
+  display:none;
+ 
+}
+
+
