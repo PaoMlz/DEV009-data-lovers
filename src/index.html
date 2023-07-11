@@ -69,9 +69,6 @@
         </form>
        
        <form >
-        <button type="button" id="resetButton">Reset</button>
-       </form>
-       <form >
         <button id="btnhome">HOME</button>
        </form>
       </div>
@@ -103,7 +100,20 @@
        </div>
 
        <div id="characterList">
-
+        <div id="percentageContainer" class="percentage-container">
+          <h3>Gender and Species Character</h3>
+          <form>
+            <input type="checkbox" id="maleCheckbox" checked>
+            <label for="maleCheckbox">Male</label>
+            <input type="checkbox" id="femaleCheckbox" checked>
+            <label for="femaleCheckbox">Female</label>
+            <input type="checkbox" id="humanCheckbox" checked>
+            <label for="humanCheckbox">Human</label>
+            <input type="checkbox" id="nonHumanCheckbox" checked>
+            <label for="nonHumanCheckbox">Non-Human</label>
+          </form>
+          <div id="percentageContent"></div>
+        </div>
        </div>
       
       </main>

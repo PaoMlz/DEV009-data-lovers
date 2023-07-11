@@ -1,3 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  }
+.home {
+  background-image: url(./imagenes/90ff6fe1fa93ee8abb993fbcdf80b7a8.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  }
+    
+.home p {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 4vw;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #3f7ed7;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 20px;
+  }
+
+.redes {
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  padding: 10px;
+  background-color: #b6cfe4cf;
+  width: 330px;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 20px;
+  }
+      
+.redes h2 {
+  margin-top: 0;
+  color: #0c0202;
+  font-size: larger;
+  text-align: center;
+  }
+      
+.redes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  }
+      
+.redes ul li {
+  margin: 5px;
+  }
+      
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  }
+
+#moviesbutton{
+  background-image:url(./imagenes/WhatsApp-Video-2023-07-05-at-7.46.40-PM.gif);
+  width: 250px;
+  height:140px;
+  background-size: 100% auto;
+  background-repeat:no-repeat ;
+  color:rgb(255, 245, 245);
+  font-size: 60px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  align-content: center;
+  position: absolute;
+  bottom: 50px;
+  left: 80px;
+  padding: 10px;
+  border-radius: 20px;
+  }
+    
+#characterButton{
+  background-image:url(./imagenes/totorm.gif);
+  width: 260px;
+  height:140px;
+  background-size: 100% auto;
+  background-repeat:no-repeat ;
+  color:rgb(255, 245, 245);
+  font-size:50px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+  position: absolute;
+  bottom: 50px;
+  border-radius: 20px;
+  }
+
 #pagemovies {
   display: none;
   grid-template-columns: repeat(4, 1fr);
@@ -9,55 +113,6 @@
   overflow: hidden;
 }
 
-.card {
-  display: flex;
-  flex-direction: column; /* Añadido para que la imagen y el texto estén en columnas */
-  justify-content: center; /* Añadido para centrar verticalmente el contenido */
-  align-items: center; /* Añadido para centrar horizontalmente el contenido */
-  width: 100%;
-  height: 100%;
-  background-color: #3f7ed7;
-  border-radius: 8px;
-  padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  box-sizing: border-box; /* Añadido para asegurar que el padding no afecte el tamaño total de las tarjetas */
-}
-
-select {
-font-size: medium; /* Ajusta el tamaño de la letra según tus necesidades */
-border-radius: 20px;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-
-.card img {
-  width: 150px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-p {
-  text-align: center; /* Añadido para centrar el texto */
-  margin-top: 10px;
-}
-
-.card h1 {
-  margin: 0;
-  font-size: 18px;
-  color: #000000;
-  text-align: center;
-  font-size: smaller;
-}
-
-.card h2 {
-  margin: 0;
-  font-size: 18px;
-  color: #ffffff;
-  text-align: center;
-  font-size: large;
-}
 #pagemoviebig{
   display: none;
   justify-content: center; /* Añadido para centrar verticalmente el contenido */
@@ -78,249 +133,49 @@ p {
   background-size: 35% auto;
 }
 
-
-/* Estilos para dispositivos móviles */
-@media screen and (max-width: 767px) {
-.pagemovies {
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: auto;
-background-size: cover;
+.card {  /* Card de Movies */
+  display: flex;
+  flex-direction: column; /* Añadido para que la imagen y el texto estén en columnas */
+  justify-content: center; /* Añadido para centrar verticalmente el contenido */
+  align-items: center; /* Añadido para centrar horizontalmente el contenido */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  box-sizing: border-box; /* Añadido para asegurar que el padding no afecte el tamaño total de las tarjetas */
 }
+.card img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
 }
-
-/* Estilos para tabletas */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-.pagemovies {
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: auto;
-background-size: cover;
-}
-}
-
-/* Estilos para pantallas más grandes */
-@media screen and (min-width: 1024px) {
-.pagemovies {
-grid-template-columns: repeat(5, 1fr);
-grid-template-rows: repeat(4, 1fr);
-background-size: 100% auto;
-}
-}
-
-.home {
-background-image: url(./imagenes/90ff6fe1fa93ee8abb993fbcdf80b7a8.gif);
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
-width: 100vw;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-overflow: hidden;
-display: none;
+.card h1 {
+  margin: 0;
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+  font-size: smaller;
 }
 
-
-/* Estilos para dispositivos móviles */
-@media screen and (max-width: 767px) {
-.home {
-background-size: cover;
-flex-wrap: wrap;
-}
-}
-
-/* Estilos para tabletas */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-.home {
-background-size: cover;
-position:fixed;
-text-align: center;
-flex-wrap: wrap;
-}
-}
-
-/* Estilos para pantallas más grandes */
-@media screen and (min-width: 1024px) {
-.home {
-background-size: 100% auto;
-position:fixed;
-text-align: center;
-}
-}
-
-.home p{
-font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-font-size: 4vw;
-text-align:center;
-color: #ffffff;
-text-shadow: #3f7ed7;
-font-style: italic;
-font-weight: bold;
-}
-
-
-body {
-margin: 0;
-padding: 0;
-overflow-x: hidden;
-}
-
-.home {
-position: relative;
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-text-align: center;
-flex-wrap: wrap;
-overflow: hidden;
-}
-
-.home::before {
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-image: url(./imagenes/90ff6fe1fa93ee8abb993fbcdf80b7a8.gif);
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
-opacity: 0.5;
-z-index: -1;
-}
-
-.home p {
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-font-size: 4vw;
-text-align: center;
-color: #ffffff;
-text-shadow: 1px 1px 2px #3f7ed7;
-font-style: italic;
-font-weight: bold;
-margin-bottom: 20px;
-}
-
-
-.redes {
-position: absolute;
-bottom: 40px;
-right: 20px;
-padding: 10px;
-background-color: #b6cfe4cf;
-width: 330px;
-max-height: 200px;
-overflow-y: auto;
-border-radius: 20px;
-}
-
-.redes h2 {
-margin-top: 0;
-color: #0c0202;
-font-size: larger;
-text-align: center;
-}
-
-.redes ul {
-list-style: none;
-padding: 0;
-margin: 0;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-}
-
-.redes ul li {
-margin: 5px;
-}
-
-.logo {
-position: absolute;
-top: 20px;
-left: 50%;
-transform: translateX(-50%);
-z-index: 1;
-}
-
-/* Estilos para dispositivos móviles */
-@media screen and (max-width: 767px) {
-.redes ul li img {
-width: 30px;
-height: 30px;
-}
-}
-
-#btnhome{
-  font-size:15px;
-  font-family:Verdana,Helvetica;
-  font-weight:bold;
-  color:white;
-  background:#6689ac;
-  border:0px;
-  width:90px;
-  height:20px;
-  border-radius: 20px;
-}
-
-#moviesbutton{
-background-image:url(./imagenes/WhatsApp-Video-2023-07-05-at-7.46.40-PM.gif);
-width: 250px;
-height:140px;
-background-size: 100% auto;
-background-repeat:no-repeat ;
-color:rgb(255, 245, 245);
-font-size: 60px;
-font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-align-content: center;
-position: absolute;
-bottom: 50px;
-left: 80px;
-padding: 10px;
-border-radius: 20px;
-}
-
-#characterButton{
-  background-image:url(./imagenes/totorm.gif);
-  width: 260px;
-  height:140px;
-  background-size: 100% auto;
-  background-repeat:no-repeat ;
-  color:rgb(255, 245, 245);
-  font-size:50px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
-  position: absolute;
-  bottom: 50px;
-  border-radius: 20px;
-}
-
-@media screen and (max-width: 767px) {
-  #moviesbutton {
-    width: 150px;
-    height: 80px;
-    font-size: 24px;
-    padding: 8px;
-  }
-  
-  #character {
-    width: 150px;
-    height: 80px;
-    font-size: 18px;
-    padding: 6px;
-  }
+.card h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #3d0eac;
+  text-align: center;
+  font-size: large;
 }
 
 .card-content {
   display:none;
-  overflow: hidden;
   background-image:url(./imagenes/wallpaper\ totoro.png);
-  background-size: 100% auto;
   background-repeat:no-repeat;
   margin: 20px;
   border-radius: 20px;
+  background-size: cover;
 }
 .card-content h1{
   color: #ffffff;
@@ -362,33 +217,146 @@ border-radius: 20px;
   letter-spacing: 2px;
   text-align: justify;
 }
+#btnhome{
+  font-size:15px;
+  font-family:Verdana,Helvetica;
+  font-weight:bold;
+  color:white;
+  background:#6689ac;
+  border:0px;
+  width:90px;
+  height:20px;
+  border-radius: 20px;
+}
+
+
+select {
+font-size: medium; /* Ajusta el tamaño de la letra según tus necesidades */
+border-radius: 20px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p {
+  text-align: center; /* Añadido para centrar el texto */
+  margin-top: 10px;
+}
+
+#character {
+  width: 150px;
+  height: 80px;
+  font-size: 18px;
+  padding: 6px;
+}
 
 #characterList { /*nuevo */
-  background-color: #6689ac;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 30px;
-  background-repeat: repeat;
-  background-size: 100% auto;
-  overflow: hidden;
-  height: 800px;
-  
-
+background-image:url(./imagenes/fondocharacterlist.jpg);
+display: none;
+flex-wrap: wrap;
+justify-content: flex-start;
+align-items: flex-start;
+gap: 30px;
+background-repeat: repeat;
+background-size: 100% auto;
+overflow: hidden;
+height: 100%;
+width: 100%;
 
 }
 
 .character-card {
-  background-color: #3f7ed7;
-  display: flex;
-  flex-direction: column; /* Añadido para que la imagen y el texto estén en columnas */
-  justify-content: center; /* Añadido para centrar verticalmente el contenido */
-  align-items: center; /* Añadido para centrar horizontalmente el contenido */
-  flex-wrap: wrap;
-  border-radius: 8px;
-  padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  box-sizing: border-box; /* Añadido para asegurar que el padding no afecte el tamaño total de las tarjetas */
+background-color: transparent; 
+flex: 0 0 calc(20% - 30px); /* Ajusta el ancho de cada tarjeta para ocupar 20% con espacio entre ellas */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 8px;
+padding: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+overflow: hidden;
+box-sizing: border-box;
 }
+
+.character-card img {
+width: 150px;
+height: 150px;
+object-fit: cover;
+border-radius: 50% ; 
+width: 170px;
+height: 220px;
+}
+
+.character-card h2 {
+margin-bottom: -5px;
+color: #000000;
+text-align: center;
+font-size: large;
+padding: 8px;
+background-color: rgba(255, 255, 255, 0.7);
+border-radius: 7px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.character-card p {
+margin-bottom: -5px;
+color: #000000;
+text-align: center;
+font-size: large;
+padding: 8px;
+background-color: rgba(255, 255, 255, 0.7);
+border-radius: 7px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#percentageContainer {
+  background-color: rgb(136, 167, 177);
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.4);
+ }
+
+ input[type="checkbox"] {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 767px) {
+.home{ 
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: auto;
+background-size: cover;
+}
+.redes ul li img {
+  width: 30px;
+  height: 30px;
+  }
+  #moviesbutton {
+    width: 150px;
+    height: 80px;
+    font-size: 24px;
+    padding: 8px;
+  }
+ }
+
+
+/* Estilos para tabletas */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+ .home{ 
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: auto;
+background-size: cover;
+}
+}
+
+/* Estilos para pantallas más grandes */
+@media screen and (min-width: 1024px) {
+  .home{ 
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(4, 1fr);
+background-size: 100% auto;
+}
+ }
+
+
 
 

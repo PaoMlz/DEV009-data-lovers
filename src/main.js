@@ -1,10 +1,11 @@
 import data from './data/ghibli/ghibli.js';
-import { sorted, selectYear, selectDirPro,searchmovies } from './data.js';
+import { sorted, selectYear, selectDirPro, searchmovies, calculateGenderSpecies } from './data.js';
 
-const films=data.films;
-const pagemoviebig= document.getElementById("pagemoviebig");
-const pagemovies =document.getElementById("pagemovies");
-const characterList = document.getElementById("characterList");//Nuevo
+const films = data.films;
+const pagemoviebig = document.getElementById("pagemoviebig");
+const pagemovies = document.getElementById("pagemovies");
+const characterList = document.getElementById("characterList");
+const percentageContainer = document.getElementById("percentageContainer");
 
 const showAllCards = (films) => {
   for (let i = 0; i < films.length; i++) {
@@ -31,7 +32,6 @@ const showAllCards = (films) => {
     card.appendChild(release_date);
     card.appendChild(director);
     card.appendChild(producer);
-    
 
     const cardContent = document.createElement("div");
     cardContent.className = "card-content";
@@ -41,8 +41,7 @@ const showAllCards = (films) => {
 
     const score = document.createElement("h3");
     score.innerText = "Score: " + films[i].rt_score;
-    
-    
+
     const titleCopy = title.cloneNode(true);
     const release_dateCopy = release_date.cloneNode(true);
     const directorCopy = director.cloneNode(true);
@@ -57,10 +56,9 @@ const showAllCards = (films) => {
     cardContent.appendChild(description);
     cardContent.appendChild(posterCopy);
 
-
     card.addEventListener("click", () => {
       card.style.display = "none";
-      pagemovies.style.display="none";
+      pagemovies.style.display = "none";
       cardContent.style.display = "grid";
     });
 
@@ -73,20 +71,18 @@ const showAllCards = (films) => {
 const showAllCharacters = () => {
   const allCharacters = films.reduce((characters, film) => {
     const people = film.people;
-  
+
     if (people) {
       characters.push(...people);
     }
     return characters;
-  },[]);
-console.log (allCharacters);
-  if (allCharacters.length === 0) {
-    console.log("No hay personajes para mostrar.");
-  }
-  else{ 
+  }, []);
 
-  for (let i = 0; i < allCharacters.length; i++) {
-    const character = allCharacters[i];
+  if (allCharacters.length === 0) {
+    // console.log("No hay personajes para mostrar.");
+  } else {
+    for (let i = 0; i < allCharacters.length; i++) {
+      const character = allCharacters[i];
       const characterCard = document.createElement("div");
       characterCard.className = "character-card";
 
@@ -97,35 +93,98 @@ console.log (allCharacters);
       const name = document.createElement("h2");
       name.innerText = character.name;
 
+      const gender = document.createElement("p");
+      gender.innerText = "Gender: " + character.gender;
+
+      const specie = document.createElement("p");
+      specie.innerText = "Species: " + character.specie;
+
+      const age = document.createElement("p");
+      age.innerText = "Age: " + character.age;
+
       characterCard.appendChild(img);
       characterCard.appendChild(name);
+      characterCard.appendChild(gender);
+      characterCard.appendChild(specie);
+      characterCard.appendChild(age);
 
       characterList.appendChild(characterCard);
-    } 
+    }
+  }
+
+  const genderSpeciesDistribution = calculateGenderSpecies(allCharacters);
+
+  const maleCountElement = document.createElement("p");
+  maleCountElement.id = "maleCount";
+  maleCountElement.innerText = "Male Count: " + genderSpeciesDistribution.maleCount;
+
+  const femaleCountElement = document.createElement("p");
+  femaleCountElement.id = "femaleCount";
+  femaleCountElement.innerText = "Female Count: " + genderSpeciesDistribution.femaleCount;
+
+  const humanCountElement = document.createElement("p");
+  humanCountElement.id = "humanCount";
+  humanCountElement.innerText = "Human Count: " + genderSpeciesDistribution.humanCount;
+
+  const nonHumanCountElement = document.createElement("p");
+  nonHumanCountElement.id = "nonHumanCount";
+  nonHumanCountElement.innerText = "Non-Human Count: " + genderSpeciesDistribution.nonHumanCount;
+
+  percentageContainer.appendChild(maleCountElement);
+  percentageContainer.appendChild(femaleCountElement);
+  percentageContainer.appendChild(humanCountElement);
+  percentageContainer.appendChild(nonHumanCountElement);
+
+  // Función para mostrar u ocultar los datos según las casillas de verificación
+  const toggleGenderSpeciesData = (dataKey, isChecked) => {
+    const dataElement = document.getElementById(dataKey);
+    if (isChecked) {
+      dataElement.style.display = "block";
+    } else {
+      dataElement.style.display = "none";
+    }
   };
+
+  // Event listeners para las casillas de verificación
+  const maleCheckbox = document.getElementById("maleCheckbox");
+  const femaleCheckbox = document.getElementById("femaleCheckbox");
+  const humanCheckbox = document.getElementById("humanCheckbox");
+  const nonHumanCheckbox = document.getElementById("nonHumanCheckbox");
+
+  maleCheckbox.addEventListener("change", () => {
+    toggleGenderSpeciesData("maleCount", maleCheckbox.checked);
+  });
+
+  femaleCheckbox.addEventListener("change", () => {
+    toggleGenderSpeciesData("femaleCount", femaleCheckbox.checked);
+  });
+
+  humanCheckbox.addEventListener("change", () => {
+    toggleGenderSpeciesData("humanCount", humanCheckbox.checked);
+  });
+
+  nonHumanCheckbox.addEventListener("change", () => {
+    toggleGenderSpeciesData("nonHumanCount", nonHumanCheckbox.checked);
+  });
 };
 
-  
 const sortTitle = document.getElementById("sort");
-sortTitle.addEventListener("change",()=>{
+sortTitle.addEventListener("change", () => {
   const userOption = sortTitle.value;
   const sortedDataAsc = sorted(films, userOption);
   pagemovies.innerHTML = "";
   showAllCards(sortedDataAsc);
-  // console.log(sortedDataAsc);
 });
 
-showAllCards(films);  
+showAllCards(films);
 
-  
 const selectYearElement = document.getElementById("year");
 selectYearElement.addEventListener("change", () => {
   const userSelect = selectYearElement.value;
-  const byYear = selectYear(films, userSelect); 
+  const byYear = selectYear(films, userSelect);
   pagemovies.innerHTML = "";
   showAllCards(byYear);
 });
-
 
 const selectproductElement = document.getElementById("direcandproduc");
 selectproductElement.addEventListener("change", () => {
@@ -133,13 +192,11 @@ selectproductElement.addEventListener("change", () => {
   const bydireprodu = selectDirPro(films, userSelect2);
   pagemovies.innerHTML = "";
   showAllCards(bydireprodu);
-  // console.log(bydireprodu);
 });
 
-
 const searchmovie = document.getElementById("moviesearch2");
-searchmovie.addEventListener("keydown", (event) => { //keydown se usa cuando uno quiere que una tecla especifica empiece el evento.
-  if (event.key === "Enter") { /// la condicion para decir con que tecla sucede
+searchmovie.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
     event.preventDefault();
     const usersearch = searchmovie.value;
     const searchresult = searchmovies(films, usersearch);
@@ -148,20 +205,17 @@ searchmovie.addEventListener("keydown", (event) => { //keydown se usa cuando uno
   }
 });
 
-
-
 document.addEventListener("DOMContentLoaded", function() {
   const moviesbutton = document.getElementById("moviesbutton");
-  const characterButton = document.getElementById("characterButton");//nueeeeeeeeeeevo
+  const characterButton = document.getElementById("characterButton");
   const home = document.querySelector(".home");
-  const pagemoviesbig = document.getElementById("pagemoviebig"); // Corregido el ID del elemento
+  const pagemoviesbig = document.getElementById("pagemoviebig");
   const btnhome = document.getElementById("btnhome");
 
-
   moviesbutton.addEventListener("click", function() {
-    home.style.display = "none";//que no se vea la pagina inicial
-    pagemoviesbig.style.display = "grid";//que se vea pagemoviebig
-    pagemovies.style.display= "grid"; // que se vea pagemovies
+    home.style.display = "none";
+    pagemoviesbig.style.display = "grid";
+    pagemovies.style.display = "grid";
   });
 
   characterButton.addEventListener("click", function() {
@@ -170,13 +224,11 @@ document.addEventListener("DOMContentLoaded", function() {
     pagemovies.style.display = "none";
     showAllCharacters();
     characterList.style.display = "flex";
-    console.log("clicpersonaje");
   });
 
   btnhome.addEventListener("click", function() {
-    home.style.display = "block";//que se vea
+    home.style.display = "block";
     pagemoviesbig.style.display = "none";
   });
-  
-
 });
+
