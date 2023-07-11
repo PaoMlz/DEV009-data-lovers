@@ -30,7 +30,6 @@ export const calculateGenderSpecies = (allCharacters) => {
   let femaleCount = 0;
   let humanCount = 0;
   let nonHumanCount = 0;
-  let totalCharacters = 0;
 
   allCharacters.forEach(character => {
     if (character.gender === "Male") {
@@ -44,16 +43,13 @@ export const calculateGenderSpecies = (allCharacters) => {
     } else {
       nonHumanCount++;
     }
-
-    totalCharacters++;
   });
-
 
   return {
     maleCount,
     femaleCount,
     humanCount,
     nonHumanCount,
-    totalCharacters,
   };
 };
+

@@ -1,4 +1,4 @@
-import { sorted, selectYear, selectDirPro, searchmovies } from '../src/data.js';
+import { sorted, selectYear, selectDirPro, searchmovies, calculateGenderSpecies} from '../src/data.js';
 
 const data = [
   {
@@ -6,18 +6,26 @@ const data = [
     "release_date": "1986",  
     "director": "Hayao Miyazaki",
     "producer": "Isao Takahata",
+    "gender": "Male",
+    "specie": "Human",
   },
   {
     "title": "My Neighbor Totoro", 
     "release_date": "1988",
     "director": "Hayao Miyazaki",
     "producer": "Hayao Miyazaki",
+    "gender": "Female",
+    "specie": "Human",
   },
+
   {
     "title": "Kiki's Delivery Service",
     "release_date": "1989",
     "director": "Hayao Miyazaki",
     "producer": "Hayao Miyazaki",
+    "gender": "Female",
+    "age": "13",
+    "specie": "Witch"
   }, 
 ];
 
@@ -73,5 +81,20 @@ describe('searchmovies', () => {
     expect(result.length).toEqual(1);
     expect(result[0].title).toEqual("My Neighbor Totoro");
   });
+});
+
+describe('calculateGenderSpecies', () => {
+  it('Is a function', () => {
+    expect(typeof calculateGenderSpecies).toBe('function');
+  });
+
+  it('returns character counts for all characters', () => {
+    const result = calculateGenderSpecies(data);
+    expect(result.maleCount).toEqual(1); 
+    expect(result.femaleCount).toEqual(2);
+    expect(result.humanCount).toEqual(2);
+    expect(result.nonHumanCount).toEqual(1);
+  });
+  
 });
 

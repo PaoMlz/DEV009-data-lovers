@@ -1,625 +1,168 @@
 # Data Lovers
 
 ## Índice
+1. Definición del producto. 
+2. Proceso de diseño.
+3. Como el producto resulve los problemas que tiene el usuario. 
+4. Historias de usuario (criterios de aceptación).
+5. Diseños de baja fidelidad. 
+6. Diseño de alta fidelidad (link figma).
+7. Pruebas unitarias. (pretest y test) 
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist para solicitar PF](#9-checklist-para-solicitar-pf)
+1. Definición del producto.
 
-***
+El proyecto de Studio Ghibli es una página web que permite a los usuarios explorar y obtener información sobre las películas y personajes de Studio Ghibli, un reconocido estudio de animación japonés. El objetivo principal del mismo es brindar a los fanáticos, entusiastas y personas que quieran conocer más del Studio Ghibli, una plataforma intuitiva y atractiva para descubrir y disfrutar de la historia y el encanto de las películas del estudio.
 
-## 1. Preámbulo
+Por medio de esta página web se logra explorar una amplia biblioteca de películas, junto con información detallada como sinopsis, puntaje, productores, directores, año de lanzamiento y el póster oficial, con opción de organizar las peliculas de la A a la z y de la Z a la A, filtrar las peliculas segun el año de lanzamiento, los productores o directores y tener una búsqueda avanzada si se desea encontrar una película en particular. Además, se pueden conocer personajes icónicos del Studio Ghibli y sus características.
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
+2. Proceso de diseño.
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
+El diseño del proyecto de Studio Ghibli se basó en un enfoque centrado en el usuario, teniendo en cuenta las necesidades y expectativas de los fans de Studio Ghibli. Se realizó un proceso de investigación para comprender las preferencias de los usuarios y lo que buscan en una página web relacionada con Studio Ghibli.
 
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por las
-usuarias, al lado derecho.
+Luego, se llevó a cabo el diseño de la interfaz de usuario, creando prototipos de baja y alta fidelidad para garantizar una experiencia agradable para los usuarios. Estos prototipos fueron iterados y refinados en base al feedback recibido de los usuarios reales.
 
-![pokemon-data-to-ui](https://user-images.githubusercontent.com/12631491/218505816-c6d11758-9de4-428f-affb-2a56ea4d68c4.png)
+Una vez finalizado el diseño, se procedió a la implementación y desarrollo utilizando diferentes tecnologías. Se puso énfasis en la usabilidad, la accesibilidad y el diseño visual para crear una experiencia atractiva y fácil de usar.
 
-## 2. Resumen del proyecto
+En resumen, el proyecto de Studio Ghibli ha sido diseñado y desarrollado con el objetivo de brindar a los usuarios una experiencia enriquecedora al explorar las películas del Studio Ghibli y sumergirse en la belleza de sus personajes.
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
+![Fedback prototipo baja fidelidad usuario #1](../DEV009-data-lovers/src/imagenes/fb1.png)
+![Feedback prototipo baja fidelidad usuario #2](../DEV009-data-lovers/src/imagenes/fb2.jpg)
+ 
+Usuario #3
+Para el usuario 3 , hicimos una demostración Presencial, en donde se nos dio como recomendación y/o sugerencia Colocar las plataformas de Streaming en donde se indique al usuario en donde pueden ver las películas, y en personajes poder diferenciar entre las  Especies humanas y no humanas.
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mínimo, etc).
+![Feedback prototipo alta fidelidad usuario #1](../DEV009-data-lovers/src/imagenes/fb%20alta%201.png)
+![Feedback prototipo alta fidelidad usuario #2](../DEV009-data-lovers/src/imagenes/fb%20alta%202.1.png)
+![Feedback prototipo alta fidelidad usuario #2](../DEV009-data-lovers/src/imagenes/fb%20alta%202.2.png)
+![Feedback prototipo alta fidelidad usuario #2](../DEV009-data-lovers/src/imagenes/fb%20alta%202.3.png)
+![Feedback prototipo alta fidelidad usuario #3](../DEV009-data-lovers/src/imagenes/fb%20alta%203.png)
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
+Para obtener una comprensión más profunda de las necesidades y deseos de los usuarios, llevamos a cabo una serie de pruebas de usabilidad con usuarios reales. En la primera etapa, compartimos un prototipo de baja fidelidad con los usuarios y les pedimos que compartieran su experiencia al interactuar con él. Esto nos permitió obtener comentarios valiosos sobre la navegación, la disposición de la información y la funcionalidad general del prototipo.
 
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
+En la siguiente fase, presentamos un prototipo de alta fidelidad mediante un enlace a un diseño interactivo en Figma. Los usuarios tuvieron la oportunidad de explorar la interfaz de usuario más refinada y realizar tareas específicas. A través de esta interacción, recopilamos información detallada sobre la apariencia visual, la usabilidad y la experiencia general del usuario.
 
-Estos son datos que te proponemos:
+Utilizando el feedback y las diferentes opiniones aportadas por los usuarios durante las pruebas de usabilidad, realizamos iteraciones en nuestra página web. Incorporamos los cambios necesarios para responder adecuadamente a los requisitos y expectativas de los usuarios. Este enfoque centrado en el usuario nos ha permitido crear una experiencia de usuario mejorada y alineada con las necesidades y deseos de nuestro público objetivo.
 
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
+Durante las pruebas de usabilidad en diferentes etapas, identificamos una serie de áreas de mejora y desafíos que requerían atención en la implementación de nuestra página web. Estos hallazgos nos brindaron una valiosa lista de requisitos y oportunidades para optimizar la experiencia del usuario. Algunos de los problemas que detectamos incluyen.:
 
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  - [Investigación con jugadores de LoL](src/data/lol/README.md)
+1. La Navegación de Las Películas resultaba confusa y no intuitiva, al mezclarse el fondo con las Películas, y perder el contenido.
 
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty. [API Rick and Morty](https://rickandmortyapi.com).
-  - [Investigación con seguidores de Rick and Morty](src/data/rickandmorty/README.md)
+2. Algunos elementos de la interfaz de usuario no estaban destacados de forma efectiva, lo que podía dificultar su identificación o función según sea el caso. Además, dificultad a la hora de acceder de forma clara a la información que había en los botones
 
-* [Juegos Olímpicos de Río de Janeiro](src/data/athletes/athletes.json).
-  Este set nos proporciona la lista de los atletas que ganaron medallas en las
-  olímpiadas de Río de Janeiro.
-  - [Investigación con interesados en juegos olímpicos de Río de Janeiro](src/data/athletes/README.md)
+3. En los personajes se solicito conocer más de ellos y sus características.
 
-* [Studio Ghibli](src/data/ghibli/ghibli.json).
-  En este set encontrarás una lista de las animaciones y sus personajes del
-  [Studio Ghibli](https://ghiblicollection.com/).
-  - [Investigación con seguidores de las animaciones del Studio Ghibli](src/data/ghibli/README.md)
+4. Incluir información adicional del Studio Ghibli como por ejemplo despliegue de paginas o redes sociales informativas relacionadas.
+ 
+3. # USER EXPERIENCE: Como el producto resulve los problemas que tiene el usuario. 
+¿Quiénes son los principales usuarios del producto?
+Los principales usuarios del producto son los fanáticos de Studio Ghibli, los entusiastas de la animación japonesa y las personas interesadas en conocer más sobre las películas y el universo del Studio Ghibli.
 
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
+¿Cuáles son los objetivos de estos usuarios en relación con el producto?
+Los usuarios tienen varios objetivos en relación al producto. Buscan aprender y encontrar información relevante relacionada con el mundo de Studio Ghibli. Esto incluye conocer más acerca de las películas, su trama, personajes, vehículos y locaciones, así como descubrir detalles interesantes y profundizar en el universo creativo de Studio Ghibli. También buscan información confiable sobre las plataformas de streaming donde pueden encontrar las películas de Studio Ghibli.
 
-## 3. Objetivos de aprendizaje
+¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
+Los usuarios desean ver información sobre las diferentes películas lanzadas por Studio Ghibli y tener detalles detallados sobre las películas y sus personajes. También quieren saber dónde pueden ver estas películas para poder disfrutarlas. Estos datos son relevantes para satisfacer su interés y curiosidad sobre Studio Ghibli y facilitarles el acceso a las películas.
 
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
+¿Cuándo utilizan o utilizarían el producto?
+Los usuarios pueden utilizar el producto en diferentes momentos, como cuando deseen buscar información sobre las películas de Studio Ghibli, descubrir nuevas películas, explorar similitudes o diferencias entre los personajes, o simplemente sumergirse en el mundo creativo del Studio Ghibli. La página web les brinda una fuente confiable y organizada de información relacionada con las películas y el mundo de Studio Ghibli.
 
-### HTML
+Este producto puede ser utilizado tanto por fanáticos apasionados de Studio Ghibli que busquen profundizar su conocimiento y experiencia de las películas, como por aquellos que están descubriendo las películas del estudio por primera vez y desean explorarlas y aprender más sobre ellas.
 
-- [ ] **Uso de HTML semántico**
 
-  <details><summary>Links</summary><p>
+4. Historias de usuario (criterios de aceptación).
 
-  * [HTML semántico](https://curriculum.laboratoria.la/es/topics/html/02-html5/02-semantic-html)
-  * [Semantics - MDN Web Docs Glossary](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-</p></details>
+# HU1= MOSTRAR LA DATA AL USUARIO
+ Yo como fan de  Studio Ghibli, quiero tener acceso a un sitio web que presente de manera completa todas las películas producidas por el estudio desde su creación. En dicho sitio, se esperaba encontrar los pósters más famosos de las películas junto con sus títulos en inglés y el año del lanzamiento.
 
-### CSS
+*Criterios de Aceptación* 
+* Quiero tener acceso a una galería que muestre los posters de las  películas.
+* El póster debe ir acompañado del  título de la película y el año de estreno..
+* Ese Título debe estar claramente presentado y ser fácil de leer.
+* Debe haber un diseño atractivo y agradable para el usuario.
 
-- [ ] **Uso de selectores de CSS**
+*Definición de Terminado* 
+* [ ] El usuario ve una galería en donde encuentra todos los pósters de las diferentes películas del Studio.
+* [ ] Los usuarios encuentran los títulos de cada una de las películas del estudio en inglés.
+* [ ] Se ve claramente el año de estreno de la película.
+* [ ] Cumple con un formato atractivo para los fans, al usar imágenes que hacen parte del canon del Studio Ghibli.
+* [ ] La página es responsive,y se adapta correctamente a  diferentes dispositivos.
+* [ ] Las películas  se presentan de forma organizada.
 
-  <details><summary>Links</summary><p>
+# HU2= NAVEGAR POR LA PAGINA Y ORDENAR LA INFORMACIÓN
+Como fan de Studio Ghibli, deseo encontrar una página principal que me brinde diversas opciones y me permita ordenar las películas de varias formas para facilitar su búsqueda.
 
-  * [Intro a CSS](https://curriculum.laboratoria.la/es/topics/css/01-css/01-intro-css)
-  * [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
-</p></details>
+*Criterios de Aceptaciòn* 
+* La página principal muestra claramente las diferentes opciones disponibles.
+* Se proporcionan opciones para ordenar las películas, ya sea por año de lanzamiento o en orden alfabético.
+* Los usuarios pueden buscar una película específica ingresando su nombre en un campo designado.
+* El ordenamiento seleccionado por el usuario se refleja visualmente en la página.
 
-- [ ] **Modelo de caja (box model): borde, margen, padding**
+*Definición de Terminado* 
+* [ ] La página principal cuenta con un botón que redirige al usuario al catálogo de películas del Studio Ghibli.
+* [ ] Los usuarios pueden seleccionar una opción de ordenamiento, ya sea por año de lanzamiento o en orden alfabético ascendente o descendente.
+* [ ] Las películas se reorganizan según la opción seleccionada por el usuario.
+* [ ] Se proporciona un espacio de búsqueda donde el usuario puede ingresar el nombre de una película específica.
+* [ ] El sistema muestra los resultados de búsqueda correspondientes a la película ingresada por el usuario.
+* [ ] Se muestra visualmente cuál fue la opción seleccionada.
 
-  <details><summary>Links</summary><p>
+# HU3= FILTRAR LA INFORMACIÓN
+Como fan del Studio Ghibli, deseo poder acceder a información detallada sobre cada película, incluyendo las plataformas donde se podría ver la película, la trama, los vehículos presentes en cada una y las locaciones destacadas. Además, quiero tener la opción de filtrar las películas según el productor y/o director para mostrar únicamente las películas elaboradas por la opción seleccionada.
 
-  * [Box Model & Display](https://curriculum.laboratoria.la/es/topics/css/01-css/02-boxmodel-and-display)
-  * [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-  * [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  * [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
-  * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
-</p></details>
+*Criterios de Aceptación*
+* Se muestra una página dedicada a cada película que contiene información detallada, como la trama, los vehículos,  las locaciones relevantes y las plataformas de streaming donde podría verse las películas.
+* Los usuarios pueden filtrar las películas por productor y/o director seleccionando la opción correspondiente.
+* Al aplicar el filtro, solo se muestran las películas que cumplen con los criterios del productor y/o director seleccionado.
+* Se proporciona una interfaz clara y fácil de usar para seleccionar los filtros de productor y/o director.
 
-- [ ] **Uso de flexbox en CSS**
+*Definición de Terminado* 
+* [ ] Cada película tiene una página individual con información precisa sobre la trama y el puntaje.
+* [ ] Los usuarios pueden seleccionar una opción de filtrado para productor y/o director.
+* [ ] Las películas se muestran únicamente si cumplen con los criterios de filtrado correspondientes al productor y/o director seleccionado.
+* [ ] La interfaz de selección de filtros es intuitiva y permite una fácil interacción por parte del usuario.
+* [ ] Se proporciona una interfaz clara y fácil de usar  al momento de seleccionar los filtros.
 
-  <details><summary>Links</summary><p>
+# HU4= CALCULO AGREGADO
+ Como fan del Studio Ghibli, deseo poder acceder a información detallada sobre los personajes de cada película con  sus características. Además, quiero tener la capacidad de saber datos curiosos sobre los personajes del Studio.
 
-  * [A Complete Guide to Flexbox - CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-  * [Flexbox Froggy](https://flexboxfroggy.com/#es)
-  * [Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-</p></details>
+*Criterios de Aceptación*
+* Se muestra una sección dedicada a los personajes de todas las películas, con información relevante sobre cada uno.
+* Los usuarios pueden visualizar las características de los personajes, como nombre, edad, género y especie.
+* Quiero poder ver la información de los personajes.
 
-### Web APIs
+*Definición de Terminado*
 
-- [ ] **Uso de selectores del DOM**
+* [ ] El usuario puede seleccionar que datos quiere conocer sobre los personajes del Studio (el género y la especie).
+* [ ] Se muestra información de las características de los personajes de las películas.
+* [ ] Se proporciona las características de los personajes de forma clara y visible.
 
-  <details><summary>Links</summary><p>
+# HU5=  ACCEDER A REDES SOCIALES 
+Como fan del Studio Ghibli,  quiero tener enlaces a las redes sociales oficiales del Studio Ghibli.
 
-  * [Manipulación del DOM](https://curriculum.laboratoria.la/es/topics/browser/02-dom/03-1-dom-methods-selection)
-  * [Introducción al DOM - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Localizando elementos DOM usando selectores - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-</p></details>
+*Criterios de Aceptación*
+* Se añaden botones o enlaces a las redes sociales oficiales del Studio Ghibli para que los usuarios puedan acceder a ellas directamente desde el sitio web.
 
-- [ ] **Manejo de eventos del DOM (listeners, propagación, delegación)**
+*Definición de Terminado* 
+* [ ] Se agregan botones o enlaces a las redes sociales oficiales del Studio Ghibli, permitiendo a los usuarios acceder a ellas fácilmente desde el sitio web.
 
-  <details><summary>Links</summary><p>
 
-  * [Introducción a eventos - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events)
-  * [EventTarget.addEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener)
-  * [EventTarget.removeEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/removeEventListener)
-  * [El objeto Event](https://developer.mozilla.org/es/docs/Web/API/Event)
-</p></details>
+5. Diseños de baja fidelidad. 
 
-- [ ] **Manipulación dinámica del DOM**
 
-  <details><summary>Links</summary><p>
+![Prototipo baja fidelidad #1](../DEV009-data-lovers/src/imagenes/bf1.png)
+![Prototipo baja fidelidad #2](../DEV009-data-lovers/src/imagenes/bf2.png)
+![Prototipo baja fidelidad #3](../DEV009-data-lovers/src/imagenes/af1.png)
 
-  * [Introducción al DOM](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Node.appendChild() - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/appendChild)
-  * [Document.createElement() - MDN](https://developer.mozilla.org/es/docs/Web/API/Document/createElement)
-  * [Document.createTextNode()](https://developer.mozilla.org/es/docs/Web/API/Document/createTextNode)
-  * [Element.innerHTML - MDN](https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML)
-  * [Node.textContent - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/textContent)
-</p></details>
+6. Diseño de alta fidelidad (link figma).
 
-### JavaScript
+[link figma dinamico](https://www.figma.com/proto/s2ZtPc3GAtaTutw0cDRYdQ/Untitled?type=design&node-id=48-33&scaling=min-zoom&page-id=48%3A32&starting-point-node-id=48%3A33)
 
-- [ ] **Diferenciar entre tipos de datos primitivos y no primitivos**
+![Prototipo alta fidelidad](../DEV009-data-lovers/src/imagenes/alta%20fidelidad%201.png)
 
-- [ ] **Arrays (arreglos)**
 
-  <details><summary>Links</summary><p>
+7. Pruebas unitarias. (pretest y test) 
 
-  * [Arreglos](https://curriculum.laboratoria.la/es/topics/javascript/04-arrays)
-  * [Array - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/)
-  * [Array.prototype.sort() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-  * [Array.prototype.forEach() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-  * [Array.prototype.map() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-  * [Array.prototype.filter() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-  * [Array.prototype.reduce() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-</p></details>
+Durante todo el proceso de desarrollo, nos aseguramos de someter nuestro código a exhaustivas pruebas unitarias utilizando Jest como nuestro marco de pruebas. Esta metodología fue fundamental para garantizar que nuestro código cumpliera con altos estándares de calidad y funcionara de manera adecuada en todas las etapas del proyecto. Mediante la creación de una extensa variedad de pruebas, pudimos abordar una amplia gama de escenarios y validar las funcionalidades clave, al mismo tiempo que detectamos y corregimos posibles errores o comportamientos inesperados. Las pruebas unitarias realizadas con Jest nos brindaron una sólida confianza en la estabilidad y coherencia de nuestro código, lo que nos permitió ofrecer un producto final sólido y confiable.
 
-- [ ] **Objetos (key, value)**
+![Prueba pretest](../DEV009-data-lovers/src/imagenes/pretest.png)
 
-  <details><summary>Links</summary><p>
-
-  * [Objetos en JavaScript](https://curriculum.laboratoria.la/es/topics/javascript/05-objects/01-objects)
-</p></details>
-
-- [ ] **Variables (declaración, asignación, ámbito)**
-
-  <details><summary>Links</summary><p>
-
-  * [Valores, tipos de datos y operadores](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/01-values-variables-and-types)
-  * [Variables](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/02-variables)
-</p></details>
-
-- [ ] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
-
-  <details><summary>Links</summary><p>
-
-  * [Estructuras condicionales y repetitivas](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/01-conditionals-and-loops)
-  * [Tomando decisiones en tu código — condicionales - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals)
-</p></details>
-
-- [ ] **Uso de bucles/ciclos (while, for, for..of)**
-
-  <details><summary>Links</summary><p>
-
-  * [Bucles (Loops)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/02-loops)
-  * [Bucles e iteración - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration)
-</p></details>
-
-- [ ] **Funciones (params, args, return)**
-
-  <details><summary>Links</summary><p>
-
-  * [Funciones (control de flujo)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/03-functions)
-  * [Funciones clásicas](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/01-classic)
-  * [Arrow Functions](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/02-arrow)
-  * [Funciones — bloques de código reutilizables - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions)
-</p></details>
-
-- [ ] **Pruebas unitarias (unit tests)**
-
-  <details><summary>Links</summary><p>
-
-  * [Empezando con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/getting-started)
-</p></details>
-
-- [ ] **Módulos de ECMAScript (ES Modules)**
-
-  <details><summary>Links</summary><p>
-
-  * [import - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/import)
-  * [export - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export)
-</p></details>
-
-- [ ] **Uso de linter (ESLINT)**
-
-- [ ] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
-
-- [ ] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
-
-### Control de Versiones (Git y GitHub)
-
-- [ ] **Git: Instalación y configuración**
-
-- [ ] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
-
-- [ ] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
-
-- [ ] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
-
-- [ ] **GitHub: Despliegue con GitHub Pages**
-
-  <details><summary>Links</summary><p>
-
-  * [Sitio oficial de GitHub Pages](https://pages.github.com/)
-</p></details>
-
-- [ ] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
-
-### Centrado en el usuario
-
-- [ ] **Diseñar y desarrollar un producto o servicio poniendo a las usuarias en el centro**
-
-### Diseño de producto
-
-- [ ] **Crear prototipos de alta fidelidad que incluyan interacciones**
-
-- [ ] **Seguir los principios básicos de diseño visual**
-
-### Investigación
-
-- [ ] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
-
-  <details><summary>Links</summary><p>
-
-  * [Intro a testeos usabilidad](https://coda.io/@bootcamp-laboratoria/contenido-ux/test-de-usabilidad-15)
-  * [Pruebas con Usuarios 1 — ¿Qué, cuándo y para qué testeamos?](https://eugeniacasabona.medium.com/pruebas-con-usuarios-1-qu%C3%A9-cu%C3%A1ndo-y-para-qu%C3%A9-testeamos-7c3a89b4b5e7)
-</p></details>
-
-## 4. Consideraciones generales
-
-* Este proyecto se debe resolver en duplas.
-* El rango de tiempo estimado para completar el proyecto es de 3 a 4 Sprints.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-Los criterios para considerar que has completado este proyecto son:
-
-### Definición del producto
-
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
-
-### Historias de usuario
-
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarios.
-
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
-
-En la medida de lo posible, termina una historia de usuario antes de pasar
-a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
-
-### Diseño de la Interfaz de Usuario
-
-#### Prototipo de baja fidelidad
-
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
-
-#### Prototipo de alta fidelidad
-
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc.
-
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_.
-
-#### Testeos de usabilidad
-
-Durante el reto deberás hacer _tests_ de usabilidad con distintos usuarios, y
-en base a los resultados, deberás iterar tus diseños. Cuéntanos
-qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
-mejoraste en tu propuesta final.
-
-### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
-
-Luego de diseñar tu interfaz de usuario deberás trabajar en su implementación.
-**No** es necesario que construyas la interfaz exactamente como la diseñaste.
-Tu tiempo de hacking es escaso, así que deberás priorizar
-
-Como mínimo, tu implementación debe:
-
-1. Mostrar la data en una interfaz: puede ser un card, una tabla, una lista,
-   etc.
-2. Permitir al usuario interactuar para obtener la infomación que necesita.
-3. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
-   tamaños de pantallas: móviles, tablets y desktops.
-4. Que la interfaz siga los fundamentos de _visual design_.
-
-### Pruebas unitarias
-
-El _boilerplate_ de este proyecto no incluye Pruebas Unitarias (_tests_), así es
-que  tendrás que escribirlas tú para las funciones encargadas de  _procesar_,
-_filtrar_ y _ordenar_ la data, así como _calcular_ estadísticas.
-
-Tus _pruebas unitarias_ deben dar una cobertura del 70% de _statements_
-(_sentencias_), _functions_ (_funciones_), _lines_ (_líneas_), y _branches_
-(_ramas_) del archivo `src/data.js` que contenga tus funciones y está detallado
-en la sección de [Consideraciones técnicas](#srcdatajs).
-
-## 6. Hacker edition
-
-Las secciones llamadas _Hacker Edition_ son **opcionales**. Si **terminaste**
-con todo lo anterior y te queda tiempo, intenta completarlas. Así podrás
-profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
-
-Features/características extra sugeridas:
-
-* En lugar de consumir la data estática brindada en este repositorio, puedes
-  consumir la data de forma dinámica, cargando un archivo JSON por medio de
-  `fetch`. La carpeta `src/data` contiene una versión `.js` y una `.json` de
-  de cada set datos.
-* Agregarle a tu interfaz de usuario implementada visualizaciones gráficas. Para
-  ello te recomendamos explorar librerías de gráficas como
-  [Chart.js](https://www.chartjs.org/)
-  o [Google Charts](https://developers.google.com/chart/).
-* 100% Coverage
-
-## 7. Consideraciones técnicas
-
-La lógica del proyecto debe estar implementada completamente en JavaScript
-(ES6), HTML y CSS. En este proyecto NO está permitido usar librerías o
-frameworks, solo [vanilla JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e),
-con la excepción de librerías para hacer gráficas (charts); ver
-[_Parte opcional_](#6-hacker-edition) más arriba.
-
-El _boilerplate_ contiene una estructura de archivos como punto de partida así
-como toda la configuración de dependencias:
-
-```text
-.
-├── EXTRA.md
-├── README.md
-├── package.json
-├── src
-|  ├── data (según con qué data trabajes)
-|  |  ├── lol
-|  |  |  ├── lol.js
-|  |  |  ├── lol.json
-|  |  |  └── README.md
-|  |  ├── pokemon
-|  |  |  ├── pokemon.js
-|  |  |  ├── pokemon.json
-|  |  |  └── README.md
-|  |  └── rickandmorty
-|  |  |  ├── rickandmorty.js
-|  |  |  ├── rickandmorty.json
-|  |  |  └── README.md
-|  |  └── athletes
-|  |  |  ├── athletes.js
-|  |  |  ├── athletes.json
-|  |  |  └── README.md
-|  |  └── ghibli
-|  |  |  ├── ghibli.js
-|  |  |  ├── ghibli.json
-|  |  |  └── README.md
-|  ├── data.js
-|  ├── index.html
-|  ├── main.js
-|  └── style.css
-└── test
-   └── data.spec.js
-
-directory: 7 file: 20
-```
-
-### `src/index.html`
-
-Como en el proyecto anterior, existe un archivo `index.html`. Como ya sabes,
-acá va la página que se mostrará al usuario. También nos sirve para indicar
-qué scripts se usarán y unir todo lo que hemos hecho.
-
-### `src/main.js`
-
-Recomendamos usar `src/main.js` para todo tu código que tenga que ver con
-mostrar los datos en la pantalla. Con esto nos referimos básicamente a la
-interacción con el DOM. Operaciones como creación de nodos, registro de
-manejadores de eventos (_event listeners_ o _event handlers_), ....
-
-Esta no es la única forma de dividir tu código, puedes usar más archivos y
-carpetas, siempre y cuando la estructura sea clara para tus compañeras.
-
-En este archivo encontrarás una serie de _imports_ _comentados_. Para _cargar_
-las diferentes fuentes de datos tendrás que _descomentar_ la línea
-correspondiente.
-
-Por ejemplo, si "descomentamos" la siguiente línea:
-
-```js
-// import data from './data/lol/lol.js';
-```
-
-La línea quedaría así:
-
-```js
-import data from './data/lol/lol.js';
-```
-
-Y ahora tendríamos la variable `data` disponible en el script `src/main.js`.
-
-### `src/data.js`
-
-El corazón de este proyecto es la manipulación de datos a través de arreglos
-y objetos.
-
-Te recomendamos que este archivo contenga toda la funcionalidad que corresponda
-a obtener, procesar y manipular datos (tus funciones). Por ejemplo:
-
-* `filterData(data, condition)`: esta función `filter` o filtrar recibiría la
-  data, y nos retornaría aquellos datos que sí cumplan con la condición.
-
-* `sortData(data, sortBy, sortOrder)`: esta función `sort` u ordenar
-  recibe tres parámetros.
-  El primer parámetro, `data`, nos entrega los datos.
-  El segundo parámetro, `sortBy`, nos dice con respecto a cuál de los campos de
-  la data se quiere ordenar.
-  El tercer parámetro, `sortOrder`, indica si se quiere ordenar de manera
-  ascendente o descendente.
-
-* `computeStats(data)`: la función `compute` o calcular, nos permitirá hacer
-  cálculos estadísticos básicos para ser mostrados de acuerdo a la data
-  proporcionada.
-
-Estos nombres de funciones y de parámetros son solamente referenciales, lo que
-decidas depende de tu propia implementación.
-
-Estas funciones deben ser [_puras_](https://medium.com/laboratoria-developers/introducci%C3%B3n-a-la-programaci%C3%B3n-funcional-en-javascript-parte-2-funciones-puras-b99e08c2895d)
-e independientes del DOM. Estas funciones serán después usadas desde el archivo
-`src/main.js`, al cargar la página, y cada vez que el usuario interactúe (click,
-filtrado, ordenado, ...).
-
-### `src/data`
-
-En esta carpeta están los datos de las diferentes fuentes. Encontrarás una
-carpeta por cada fuente, y dentro de cada carpeta dos archivos: uno con la
-extensión `.js` y otro `.json`. Ambos archivos contienen la misma data; la
-diferencia es que el `.js` lo usaremos a través de una etiqueta `<script>`,
-mientras que el `.json` está ahí para opcionalmente cargar la data de forma
-asíncrona con [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
-(ver sección de [_Parte Opcional_](#6-hacker-edition)).
-
-### `test/data.spec.js`
-
-Tendrás también que completar las pruebas unitarias de las funciones
-implementadas en el archivo `data.js`.
-
-## 8. Pistas, tips y lecturas complementarias
-
-### Primeros pasos
-
-Súmate al canal de Slack
-[#project-data-lovers](https://claseslaboratoria.slack.com/archives/C03MV35EP5M)
-para conversar y pedir ayuda del proyecto.
-
-Antes de empezar a escribir código, debes definir qué deberá hacer el producto
-en base al conocimiento que puedas obtener de tu usuario. Estas preguntas te
-pueden ayudar:
-
-* ¿Quiénes son los principales usuarios de producto?
-* ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
-* ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
-* ¿Cuándo utilizan o utilizarían el producto?
-* Toda tu investigación previa debe tener como resultado todas las Historias
-  de Usuario de tu proyecto.
-* No hagas los prototipos de alta fidelidad de todas tus Historias. Comienza
-  solamente por los que se necesiten para tu Sprint 1 (semana 1 de trabajo). Más
-  pistas en la guía de organización para el proyecto.
-
-Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
-
-1. Una de las integrantes del equipo debe realizar un :fork_and_knife:
-   [fork](https://help.github.com/articles/fork-a-repo/) del repo de tu cohort,
-   tus _coaches_ te compartirán un _link_ a un repo y te darán acceso de lectura
-   en ese repo. La otra integrante del equipo deber hacer un fork **del
-   repositorio de su compañera** y
-   [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote`
-   hacia el mismo.
-2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-   tu _fork_ a tu computadora (copia local).
-3. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
-   asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
-4. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
-   pruebas unitarias (unit tests) con el comando `npm test`.
-5. Para ver la interfaz de tu programa en el navegador, usa el comando
-  `npm start` para arrancar el servidor web y dirígete a
-  `http://localhost:5000` en tu navegador.
-6. A codear se ha dicho! :rocket:
-
-### Contenido de referencia
-
-#### Diseño de experiencia de usuario (User Experience Design)
-
-* Investigación con usuarios / entrevistas
-* Principios de diseño visual
-
-#### Desarrollo Front-end
-
-* Unidad de testing en curso de JavaScript en LMS.
-* Unidad de arreglos en curso de JavaScript en LMS.
-* Unidad de objetos en curso de JavaScript en LMS.
-* Unidad de funciones en curso de JavaScript en LMS.
-* Unidad de DOM en curso de Browser JavaScript en LMS.
-* [Array en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array)
-* [Array.sort en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort)
-* [Array.map en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map)
-* [Array.filter en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter)
-* [Array.reduce en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce)
-* [Array.forEach en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
-* [Object.keys en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/keys)
-* [Object.entries en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/entries)
-* [Fetch API en MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-* [json.org](https://json.org/json-es.html)
-* [expressions-vs-statements](https://2ality.com/2012/09/expressions-vs-statements.html)
-* [expresión vs sentencia](https://openclassrooms.com/en/courses/4309531-descubre-las-funciones-en-javascript/5108986-diferencia-entre-expresion-y-sentencia)
-* [datos atómicos vs datos estructurados](https://www.todojs.com/tipos-datos-javascript-es6/)
-* [Modulos: Export](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export)
-* [Modulos: Import](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import)
-
-#### Herramientas
-
-* [Git](https://git-scm.com/)
-* [GitHub](https://github.com/)
-* [GitHub Pages](https://pages.github.com/)
-* [Node.js](https://nodejs.org/)
-* [Jest](https://jestjs.io/)
-
-#### Organización del Trabajo
-
-* [Historias de Usuario](https://www.youtube.com/watch?v=ky6wFiF5vMk&t=344s).
-  Ojo que Cris no diferencia _Definición de terminado_ de _Criterios de
-  Aceptación_ y nosotros sí lo haremos. Más detalles en la guía.
-* [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
-* [Guía para Data Lovers](https://docs.google.com/presentation/d/e/2PACX-1vQhx9D36NjpH-Daea-ITPUDUzNL8ZiNAprq_7b5PSUrfutk45tEtaOLz2lmd8f54_5jX1hypDM8f8SM/pub?start=false&loop=false&delayms=60000)
-
-## 9. Checklist para solicitar PF
-
-* [ ] Usa VanillaJS.
-* [ ] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
-  lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
-  `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
-  en `README.md`.
-* [ ] Incluye link a Figma Dinámico para el test de usabilidad en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
-  usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
-
-Recuerda que también debes hacer: llenado de sprint check out de cierre de proyecto, una autoevaluación de objetivos de aprendizaje y autoevaluación de life skills desde tu dashboard de estudiante. [Acá el link](https://coda.io/d/_deHfHkTC743/Como-lograras-aprender-DEV_sumg1#_lu6qL) del flujo para que puedas ver el proceso.
-
-Si no has completado todo lo anterior, no consideramos que estás lista para tu sesión de Project Feedback. ([acá](https://coda.io/d/_deHfHkTC743/Project-Feedback_suLH5) te dejamos el link de esta instancia)
+![Pruebas unitarias satisfactoras](../DEV009-data-lovers/src/imagenes/test.png)
