@@ -211,6 +211,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const home = document.querySelector(".home");
   const pagemoviesbig = document.getElementById("pagemoviebig");
   const btnhome = document.getElementById("btnhome");
+  const btnhome2 = document.getElementById("btnhome2");
 
   moviesbutton.addEventListener("click", function() {
     home.style.display = "none";
@@ -229,6 +230,11 @@ document.addEventListener("DOMContentLoaded", function() {
   btnhome.addEventListener("click", function() {
     home.style.display = "block";
     pagemoviesbig.style.display = "none";
+  });
+
+  btnhome2.addEventListener("click", function() {
+    home.style.display = "block";
+    characterList.style.display = "none";
   });
 });
 
