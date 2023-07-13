@@ -81,12 +81,12 @@ Este producto puede ser utilizado tanto por fanáticos apasionados de Studio Ghi
 * Debe haber un diseño atractivo y agradable para el usuario.
 
 *Definición de Terminado* 
-* [ ] El usuario ve una galería en donde encuentra todos los pósters de las diferentes películas del Studio.
-* [ ] Los usuarios encuentran los títulos de cada una de las películas del estudio en inglés.
-* [ ] Se ve claramente el año de estreno de la película.
-* [ ] Cumple con un formato atractivo para los fans, al usar imágenes que hacen parte del canon del Studio Ghibli.
-* [ ] La página es responsive,y se adapta correctamente a  diferentes dispositivos.
-* [ ] Las películas  se presentan de forma organizada.
+* [✔️] El usuario ve una galería en donde encuentra todos los pósters de las diferentes películas del Studio.
+* [✔️] Los usuarios encuentran los títulos de cada una de las películas del estudio en inglés.
+* [✔️] Se ve claramente el año de estreno de la película.
+* [✔️] Cumple con un formato atractivo para los fans, al usar imágenes que hacen parte del canon del Studio Ghibli.
+* [✔️] La página es responsive,y se adapta correctamente a  diferentes dispositivos.
+* [✔️] Las películas  se presentan de forma organizada.
 
 # HU2= NAVEGAR POR LA PAGINA Y ORDENAR LA INFORMACIÓN
 Como fan de Studio Ghibli, deseo encontrar una página principal que me brinde diversas opciones y me permita ordenar las películas de varias formas para facilitar su búsqueda.
@@ -98,12 +98,12 @@ Como fan de Studio Ghibli, deseo encontrar una página principal que me brinde d
 * El ordenamiento seleccionado por el usuario se refleja visualmente en la página.
 
 *Definición de Terminado* 
-* [ ] La página principal cuenta con un botón que redirige al usuario al catálogo de películas del Studio Ghibli.
-* [ ] Los usuarios pueden seleccionar una opción de ordenamiento, ya sea por año de lanzamiento o en orden alfabético ascendente o descendente.
-* [ ] Las películas se reorganizan según la opción seleccionada por el usuario.
-* [ ] Se proporciona un espacio de búsqueda donde el usuario puede ingresar el nombre de una película específica.
-* [ ] El sistema muestra los resultados de búsqueda correspondientes a la película ingresada por el usuario.
-* [ ] Se muestra visualmente cuál fue la opción seleccionada.
+* [✔️] La página principal cuenta con un botón que redirige al usuario al catálogo de películas del Studio Ghibli.
+* [✔️] Los usuarios pueden seleccionar una opción de ordenamiento, ya sea por año de lanzamiento o en orden alfabético ascendente o descendente.
+* [✔️] Las películas se reorganizan según la opción seleccionada por el usuario.
+* [✔️] Se proporciona un espacio de búsqueda donde el usuario puede ingresar el nombre de una película específica.
+* [✔️] El sistema muestra los resultados de búsqueda correspondientes a la película ingresada por el usuario.
+* [✔️] Se muestra visualmente cuál fue la opción seleccionada.
 
 # HU3= FILTRAR LA INFORMACIÓN
 Como fan del Studio Ghibli, deseo poder acceder a información detallada sobre cada película, incluyendo las plataformas donde se podría ver la película, la trama, los vehículos presentes en cada una y las locaciones destacadas. Además, quiero tener la opción de filtrar las películas según el productor y/o director para mostrar únicamente las películas elaboradas por la opción seleccionada.
@@ -115,11 +115,11 @@ Como fan del Studio Ghibli, deseo poder acceder a información detallada sobre c
 * Se proporciona una interfaz clara y fácil de usar para seleccionar los filtros de productor y/o director.
 
 *Definición de Terminado* 
-* [ ] Cada película tiene una página individual con información precisa sobre la trama y el puntaje.
-* [ ] Los usuarios pueden seleccionar una opción de filtrado para productor y/o director.
-* [ ] Las películas se muestran únicamente si cumplen con los criterios de filtrado correspondientes al productor y/o director seleccionado.
-* [ ] La interfaz de selección de filtros es intuitiva y permite una fácil interacción por parte del usuario.
-* [ ] Se proporciona una interfaz clara y fácil de usar  al momento de seleccionar los filtros.
+* [✔️] Cada película tiene una página individual con información precisa sobre la trama y el puntaje.
+* [✔️] Los usuarios pueden seleccionar una opción de filtrado para productor y/o director.
+* [✔️] Las películas se muestran únicamente si cumplen con los criterios de filtrado correspondientes al productor y/o director seleccionado.
+* [✔️] La interfaz de selección de filtros es intuitiva y permite una fácil interacción por parte del usuario.
+* [✔️] Se proporciona una interfaz clara y fácil de usar  al momento de seleccionar los filtros.
 
 # HU4= CALCULO AGREGADO
  Como fan del Studio Ghibli, deseo poder acceder a información detallada sobre los personajes de cada película con  sus características. Además, quiero tener la capacidad de saber datos curiosos sobre los personajes del Studio.
@@ -131,9 +131,9 @@ Como fan del Studio Ghibli, deseo poder acceder a información detallada sobre c
 
 *Definición de Terminado*
 
-* [ ] El usuario puede seleccionar que datos quiere conocer sobre los personajes del Studio (el género y la especie).
-* [ ] Se muestra información de las características de los personajes de las películas.
-* [ ] Se proporciona las características de los personajes de forma clara y visible.
+* [✔️] El usuario puede seleccionar que datos quiere conocer sobre los personajes del Studio (el género y la especie).
+* [✔️] Se muestra información de las características de los personajes de las películas.
+* [✔️] Se proporciona las características de los personajes de forma clara y visible.
 
 # HU5=  ACCEDER A REDES SOCIALES 
 Como fan del Studio Ghibli,  quiero tener enlaces a las redes sociales oficiales del Studio Ghibli.
@@ -142,7 +142,7 @@ Como fan del Studio Ghibli,  quiero tener enlaces a las redes sociales oficiales
 * Se añaden botones o enlaces a las redes sociales oficiales del Studio Ghibli para que los usuarios puedan acceder a ellas directamente desde el sitio web.
 
 *Definición de Terminado* 
-* [ ] Se agregan botones o enlaces a las redes sociales oficiales del Studio Ghibli, permitiendo a los usuarios acceder a ellas fácilmente desde el sitio web.
+* [✔️] Se agregan botones o enlaces a las redes sociales oficiales del Studio Ghibli, permitiendo a los usuarios acceder a ellas fácilmente desde el sitio web.
 
 
 5. Diseños de baja fidelidad. 
