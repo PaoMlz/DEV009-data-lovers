@@ -25,17 +25,17 @@ Una vez finalizado el diseño, se procedió a la implementación y desarrollo ut
 
 En resumen, el proyecto de Studio Ghibli ha sido diseñado y desarrollado con el objetivo de brindar a los usuarios una experiencia enriquecedora al explorar las películas del Studio Ghibli y sumergirse en la belleza de sus personajes.
 
-![Fedback prototipo baja fidelidad usuario #1](../DEV009-data-lovers/src/imagenes/fb1.png){:width="140"}
-![Feedback prototipo baja fidelidad usuario #2](../DEV009-data-lovers/src/imagenes/fb2.jpg){:width="140"}
+![Fedback prototipo baja fidelidad usuario #1](../DEV009-data-lovers/src/imagenes/fb1.png){:width="210"}
+![Feedback prototipo baja fidelidad usuario #2](../DEV009-data-lovers/src/imagenes/fb2.jpg){:width="320"}
  
 Usuario #3
 Para el usuario 3 , hicimos una demostración Presencial, en donde se nos dio como recomendación y/o sugerencia Colocar las plataformas de Streaming en donde se indique al usuario en donde pueden ver las películas, y en personajes poder diferenciar entre las  Especies humanas y no humanas.
 
-![Feedback prototipo alta fidelidad usuario #1](../DEV009-data-lovers/src/imagenes/fb%20alta%201.png){:width="140"}
-![Feedback prototipo alta fidelidad usuario #2](../DEV009-data-lovers/src/imagenes/fb%20alta%202.1.png){:width="140"}
-![Feedback prototipo alta fidelidad usuario #2](../DEV009-data-lovers/src/imagenes/fb%20alta%202.2.png){:width="140"}
-![Feedback prototipo alta fidelidad usuario #2](../DEV009-data-lovers/src/imagenes/fb%20alta%202.3.png){:width="140"}
-![Feedback prototipo alta fidelidad usuario #3](../DEV009-data-lovers/src/imagenes/fb%20alta%203.png){:width="140"}
+![Feedback prototipo alta fidelidad usuario #1](../DEV009-data-lovers/src/imagenes/fb%20alta%201.png){:width="210"}
+![Feedback prototipo alta fidelidad usuario #2](../DEV009-data-lovers/src/imagenes/fb%20alta%202.1.png){:width="210"}
+![Feedback prototipo alta fidelidad usuario #2](../DEV009-data-lovers/src/imagenes/fb%20alta%202.2.png){:width="210"}
+![Feedback prototipo alta fidelidad usuario #2](../DEV009-data-lovers/src/imagenes/fb%20alta%202.3.png){:width="210"}
+![Feedback prototipo alta fidelidad usuario #3](../DEV009-data-lovers/src/imagenes/fb%20alta%203.png){:width="210"}
 
 Para obtener una comprensión más profunda de las necesidades y deseos de los usuarios, llevamos a cabo una serie de pruebas de usabilidad con usuarios reales. En la primera etapa, compartimos un prototipo de baja fidelidad con los usuarios y les pedimos que compartieran su experiencia al interactuar con él. Esto nos permitió obtener comentarios valiosos sobre la navegación, la disposición de la información y la funcionalidad general del prototipo.
 
@@ -148,9 +148,9 @@ Como fan del Studio Ghibli,  quiero tener enlaces a las redes sociales oficiales
 5. Diseños de baja fidelidad. 
 
 
-![Prototipo baja fidelidad #1](../DEV009-data-lovers/src/imagenes/bf1.png){:width="220"}
+![Prototipo baja fidelidad #1](../DEV009-data-lovers/src/imagenes/bf1.png){:width="260"}
 ![Prototipo baja fidelidad #2](../DEV009-data-lovers/src/imagenes/bf2.png){:width="220"}
-![Prototipo baja fidelidad #3](../DEV009-data-lovers/src/imagenes/af1.png){:width="220"}
+![Prototipo baja fidelidad #3](../DEV009-data-lovers/src/imagenes/af1.png){:width="260"}
 
 6. Diseño de alta fidelidad (link figma).
 
@@ -163,6 +163,6 @@ Como fan del Studio Ghibli,  quiero tener enlaces a las redes sociales oficiales
 
 Durante todo el proceso de desarrollo, nos aseguramos de someter nuestro código a exhaustivas pruebas unitarias utilizando Jest como nuestro marco de pruebas. Esta metodología fue fundamental para garantizar que nuestro código cumpliera con altos estándares de calidad y funcionara de manera adecuada en todas las etapas del proyecto. Mediante la creación de una extensa variedad de pruebas, pudimos abordar una amplia gama de escenarios y validar las funcionalidades clave, al mismo tiempo que detectamos y corregimos posibles errores o comportamientos inesperados. Las pruebas unitarias realizadas con Jest nos brindaron una sólida confianza en la estabilidad y coherencia de nuestro código, lo que nos permitió ofrecer un producto final sólido y confiable.
 
-![Prueba pretest](../DEV009-data-lovers/src/imagenes/pretest.png){:width="220"}
+![Prueba pretest](../DEV009-data-lovers/src/imagenes/pretest.png){:width="420"}
 
-![Pruebas unitarias satisfactoras](../DEV009-data-lovers/src/imagenes/test.png){:width="220"}
+![Pruebas unitarias satisfactoras](../DEV009-data-lovers/src/imagenes/test.png){:width="420"}
